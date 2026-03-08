@@ -21,14 +21,14 @@
         <h3 class="font-heading font-semibold text-lg mb-4 text-white">Snelle links</h3>
         <ul class="space-y-2">
           <li><a href={import.meta.env.BASE_URL} class="text-white/80 hover:text-white transition-colors text-sm">Home</a></li>
-          <li><a href="/loopbaancoaching/" class="text-white/80 hover:text-white transition-colors text-sm">Loopbaancoaching</a></li>
-          <li><a href="/re-integratie/" class="text-white/80 hover:text-white transition-colors text-sm">Re-integratie</a></li>
-          <li><a href="/outplacement" class="text-white/80 hover:text-white transition-colors text-sm">Outplacement</a></li>
-          <li><a href="/werkenergieanalyse/" class="text-white/80 hover:text-white transition-colors text-sm">Werkenergieanalyse</a></li>
-          <li><a href="/aanbevelingen" class="text-white/80 hover:text-white transition-colors text-sm">Aanbevelingen</a></li>
-          <li><a href="/joep" class="text-white/80 hover:text-white transition-colors text-sm">Over Joep</a></li>
-          <li><a href="/contact" class="text-white/80 hover:text-white transition-colors text-sm">Contact</a></li>
-          <li><a href="/links" class="text-white/80 hover:text-white transition-colors text-sm">Links</a></li>
+          <li><a href={`${import.meta.env.BASE_URL}loopbaancoaching/`} class="text-white/80 hover:text-white transition-colors text-sm">Loopbaancoaching</a></li>
+          <li><a href={`${import.meta.env.BASE_URL}re-integratie/`} class="text-white/80 hover:text-white transition-colors text-sm">Re-integratie</a></li>
+          <li><a href={`${import.meta.env.BASE_URL}outplacement`} class="text-white/80 hover:text-white transition-colors text-sm">Outplacement</a></li>
+          <li><a href={`${import.meta.env.BASE_URL}werkenergieanalyse/`} class="text-white/80 hover:text-white transition-colors text-sm">Werkenergieanalyse</a></li>
+          <li><a href={`${import.meta.env.BASE_URL}aanbevelingen`} class="text-white/80 hover:text-white transition-colors text-sm">Aanbevelingen</a></li>
+          <li><a href={`${import.meta.env.BASE_URL}joep`} class="text-white/80 hover:text-white transition-colors text-sm">Over Joep</a></li>
+          <li><a href={`${import.meta.env.BASE_URL}contact`} class="text-white/80 hover:text-white transition-colors text-sm">Contact</a></li>
+          <li><a href={`${import.meta.env.BASE_URL}links`} class="text-white/80 hover:text-white transition-colors text-sm">Links</a></li>
         </ul>
       </div>
 
@@ -63,8 +63,8 @@
     <div class="mt-10 pt-6 border-t border-white/20 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-white/60">
       <p>© 2024 Joep Lochtenberg – Loopbaancoach in Hilversum</p>
       <div class="flex gap-4">
-        <a href="/privacy" class="hover:text-white transition-colors">Privacy</a>
-        <a href="/disclaimer" class="hover:text-white transition-colors">Disclaimer</a>
+        <a href={`${import.meta.env.BASE_URL}privacy`} class="hover:text-white transition-colors">Privacy</a>
+        <a href={`${import.meta.env.BASE_URL}disclaimer`} class="hover:text-white transition-colors">Disclaimer</a>
       </div>
     </div>
   </div>

@@ -141,7 +141,7 @@ import CTASection from '../../components/CTASection.astro';
               </li>
             </ul>
             <div class="mt-5">
-              <a href="/re-integratie/2e-spoor-begeleiding" class="text-accent font-semibold hover:text-primary transition-colors inline-flex items-center gap-1 text-sm">
+              <a href={`${import.meta.env.BASE_URL}re-integratie/2e-spoor-begeleiding`} class="text-accent font-semibold hover:text-primary transition-colors inline-flex items-center gap-1 text-sm">
                 Meer over 2e Spoor Begeleiding →
               </a>
             </div>
@@ -212,7 +212,7 @@ import CTASection from '../../components/CTASection.astro';
   <CTASection
     title="Hulp nodig bij re-integratie?"
     subtitle="Neem contact op voor een vrijblijvend gesprek over uw re-integratiesituatie. Ik denk graag met u mee."
-    href="/contact"
+    href={`${import.meta.env.BASE_URL}contact`}
     btnText="Neem contact op"
   />
 

@@ -18,10 +18,10 @@ import CTASection from '../../components/CTASection.astro';
         Ontdek wat u energie geeft en wat energie kost in uw werk. Een wetenschappelijk onderbouwd instrument voor meer werkplezier en duurzame inzetbaarheid.
       </p>
       <div class="mt-8 flex flex-wrap justify-center gap-4">
-        <a href="/contact" class="bg-accent text-white font-semibold px-7 py-3 rounded-full hover:bg-white hover:text-accent transition-colors shadow-lg">
+        <a href={`${import.meta.env.BASE_URL}contact`} class="bg-accent text-white font-semibold px-7 py-3 rounded-full hover:bg-white hover:text-accent transition-colors shadow-lg">
           Plan een gratis kennismaking
         </a>
-        <a href="/werkenergieanalyse/waarom-een-werkenergieanalyse" class="border-2 border-white text-white font-semibold px-7 py-3 rounded-full hover:bg-white hover:text-primary transition-colors">
+        <a href={`${import.meta.env.BASE_URL}werkenergieanalyse/waarom-een-werkenergieanalyse`} class="border-2 border-white text-white font-semibold px-7 py-3 rounded-full hover:bg-white hover:text-primary transition-colors">
           Waarom een werkenergieanalyse?
         </a>
       </div>
@@ -44,7 +44,7 @@ import CTASection from '../../components/CTASection.astro';
             De analyse is beschikbaar voor individuen, teams en organisaties. Voor werkgevers biedt het waardevolle inzichten in de vitaliteit en duurzame inzetbaarheid van hun medewerkers.
           </p>
           <div class="flex flex-wrap gap-3 mt-6">
-            <a href="/werkenergieanalyse/werkenergieanalyse" class="text-accent font-semibold hover:text-primary transition-colors inline-flex items-center gap-1">
+            <a href={`${import.meta.env.BASE_URL}werkenergieanalyse/werkenergieanalyse`} class="text-accent font-semibold hover:text-primary transition-colors inline-flex items-center gap-1">
               Meer over de analyse →
             </a>
           </div>
@@ -148,7 +148,7 @@ import CTASection from '../../components/CTASection.astro';
   <CTASection
     title="Wilt u meer werkplezier en vitaliteit?"
     subtitle="Plan een vrijblijvend kennismakingsgesprek en ontdek wat de Werkenergieanalyse voor u kan betekenen."
-    href="/contact"
+    href={`${import.meta.env.BASE_URL}contact`}
     btnText="Plan een gratis kennismaking"
   />
 
