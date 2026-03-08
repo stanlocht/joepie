@@ -1,0 +1,243 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import TestimonialCard from '../components/TestimonialCard.astro';
+import CTASection from '../components/CTASection.astro';
+
+const testimonials = [
+  {
+    quote: "Met een kritische constructieve spiegel weet Joep snel beweging te krijgen bij een coachingsvraag en kan hij een ieder die even vast zit in de loopbaan en/of zoekende is, snel nieuwe perspectieven en inzichten geven vanuit talenten en kwaliteiten. De positieve benadering en het enthousiasme van Joep werkt daarbij ook aanstekelijk. Kortom: het werkt fijn met Joep!",
+    author: "Eddy Bonthuis",
+    role: "Directeur Kjenning | Ontwikkeling van mens & organisatie in wonen & vastgoed",
+  },
+  {
+    quote: "Joep heeft mij als coach en mens goed begeleid in het traject waarna ik me heb gevestigd als zelfstandig trainer-coach. Ik heb de begeleiding als prettig en deskundig ervaren en ik kan Joep zeker aanbevelen.",
+    author: "Rob Smulders",
+    role: "Implementeert strategisch talentmanagement | Duurzaam talentgericht trainen & coachen",
+  },
+  {
+    quote: "Joep is een vriendelijke en sympatieke kerel. Hij heeft mij geholpen door te praten over de kern van werkplezier: Je drijfveren. Joep kijkt naar wat jij belangrijk vindt om terug te zien in je baan. Hierdoor ligt de focus niet op de baan zoeken die het best bij je past, maar achterhalen wat de eigenschappen zijn van je droombaan. Dit is top, want dat helpt je voor de rest van je leven. Je droombaan vinden is een zoektocht die je heel je leven doet. Maar als je weet hoe je moet zoeken, heb je daar veel aan. Thanks, Joep",
+    author: "Mees Lageweg",
+    role: "Bachelor of Science Aviation Operations",
+  },
+  {
+    quote: "Joep is een erg prettige, vriendelijke en kundige coach met veel kennis en ervaring. Hij weet via scherpe indirecte vragen en methodes de juiste kern en persoonlijke waardes boven tafel te krijgen. Joep stelt goede vragen en geeft 'huiswerk' opgaves mee voor thuis reflectie. Het was een waardevol traject waaraan ik heel veel heb! Ik kan Joep dan ook van harte aanbevelen.",
+    author: "Robbert-Jan Baas",
+    role: "NS Zakelijk",
+  },
+  {
+    quote: "Joep heeft mij ongelooflijk goed geholpen om mijn kracht en passie te vinden en weer met plezier, overtuiging en geloof in mezelf aan het werk te zijn, zonder leeg te lopen. Hij is enthousiast, stimulerend, gepassioneerd en confronterend: hij weet je een spiegel voor te houden en de vinger op de juiste plekken te leggen waardoor je positief verrast wordt door wat je dan tegenkomt. Met zijn hulp heb ik geleerd overtuigingen die mij tegenhouden los te laten en juist wat goed is voor mij (en dus voor mijn (werk)omgeving) op te pakken en eigen te maken. Het traject was wat mij betreft een heel vruchtbare en inspirerende samenwerking 'op zoek naar Sandra Roef en haar plek op de werkvloer'. Missie geslaagd.",
+    author: "Sandra Roef",
+    role: "Adviseur communicatie & ontwikkeling at Zuidweg & Partners",
+  },
+  {
+    quote: "Joep heeft me heel goed 'gezien' en daardoor goed geholpen mijzelf te herontdekken, zonder vooroordelen als een ongeschreven blad. Ik heb ontdekt waarop ik energie inlever en vooral waar ik energie van krijg. Tijdens de begeleiding voelde ik me erg op mijn gemak en wist hij datgeen te behandelen waar mijn behoefte lag door de juiste vragen te stellen op het juiste moment. Joep is een hele toegankelijke, positieve en vriendelijke man. Hij leeft voor dat het werkende leven niet gecompliceerd hoeft te zijn zolang je doet wat je kunt en leuk vindt en dat plezier in je werk voorop staat. Na het traject bij Joep, werk ik weer met veel plezier en krijg ik er energie van, omdat ik nu mijn eigen kompas weer kan volgen!",
+    author: "Hester Gort",
+    role: "Accountmanager Binnendienst Benelux | Sustainability | Bundling and banding solutions",
+  },
+  {
+    quote: "Een hele fijne vriendelijke man! Hij heeft mij goed geholpen met goed advies gegeven!",
+    author: "Tom Den Hertog",
+    role: "Installatiemonteur bij Mauritz techniek bv",
+  },
+  {
+    quote: "De begeleiding die ik kreeg bij Joep heeft mij veel en extra inzicht gegeven waar ik op dit moment sta en waar ik heen wil. Door voornamelijk te praten en uitschrijven van bepaalde levenservaringen kwam ik tot heldere inzichten. Joep is heel erg makkelijk te benaderen, en geeft een vertrouwd en positief gevoel. Het was dan ook fijn om over bepaalde gevoelige onderwerpen open te kunnen communiceren. Al met al, zeer prettige ervaring!",
+    author: "Frank Vreeburg",
+    role: "MScBA | Salesforce Admin Trainee | Experience in Logistics and e-Comm",
+  },
+  {
+    quote: "Ik vond de begeleiding van Joep zeer aangenaam en comfortabel. Zijn positivisme en humor werkt aanstekelijk. Hij weet heel goed waar hij het over heeft en komt professioneel over. Je weet waar je aan toe bent bij Joep door zijn doelgerichte aanpak en geeft je de inzichten en handvatten die je op dat moment nodig hebt, door veelal te observeren en niet te oordelen. Een top coach waar je echt mee verder komt!",
+    author: "Ingrid Schepers-Langeveld",
+    role: "Senior Product Manager Vios Trappen B.V.",
+  },
+  {
+    quote: "Met Joep is het fijn werken en goed sparren. Het is mooi dat hij kan afwisselen tussen meer cognitieve/inzicht gevende oefeningen en oefeningen die echt op gevoelsniveau raken. Met dat laatste kom je echt tot de kern. We weten vaak allang hoe het zit, hoe iets werkt, waarom je steeds in die valkuil stapt. Er verandert pas iets als je dat ook gaat voelen. En daar helpt Joep heel goed bij. Kortom; een aanrader!",
+    author: "Mieke Van Den Berg",
+    role: "Strategisch HR(D) & Organisatie Adviseur | Projectmanager | Coach",
+  },
+  {
+    quote: "Hele fijne sessies gehad met Joep. Voelde mij direct op mijn gemak. Zijn nuchtere aanpak sprak mij erg aan. Hij zet je aan het denken waardoor je, door zijn doortastendheid, snel tot de kern komt. De sessies hebben mij een zet in de juiste richting gegeven. Hij heeft mij laten inzien waar mijn kracht en passie ligt. Joep bedankt!",
+    author: "Monique van den Heuvel",
+    role: "",
+  },
+  {
+    quote: "Joep stopt je niet een hokje, hij benadert jou als persoon, wie jij bent en waar jij blij/gelukkig van wordt. Joep geeft je duidelijkheid en inzicht in jezelf en dat is zeer leerzaam en prettig. Daarnaast is Joep ook een fijne vent. Kortom met Joep als Loopbaancoach kom je verder!",
+    author: "Ronald van der Woude",
+    role: "Owner, Ronald van der Woude",
+  },
+  {
+    quote: "Voor mij is het traject met Joep zeer waardevol geweest. Op een prettige en persoonlijke manier heeft Joep mij handvatten gegeven die ik op de korte, maar vooral ook op de lange termijn kan gebruiken. Vanaf de eerste sessie zet Joep je op een prettige manier aan het denken en geeft hij opdrachten die je nieuwe energie geven om mee aan de slag te gaan. Joep is een zeer prettige coach, waarbij je je direct op je gemak voelt.",
+    author: "Gertjan Gerritsen",
+    role: "Sales Manager a.i. bij New Skool Media",
+  },
+  {
+    quote: "Beste Joep, je bent een goed mens met gevoel voor humor en een positief karakter. Door jou kreeg ik mijn rust en zelfvertrouwen terug. Je hebt me geïnspireerd om te zien wat ik wil. Dankjewel! Mocht je op zoek zijn naar een loopbaancoach, kies dan voor Joep Lochtenberg!",
+    author: "Dave Seton",
+    role: "Manager Logistiek en Productie",
+  },
+  {
+    quote: "Joep heb ik ervaren als een prettige coach waar je je meteen bij op je gemak voelt. Ik worstelde met vragen over mijn loopbaan na een minder geslaagde periode. Ik kreeg oefeningen en confrontaties waardoor ik weer in mijn kracht kwam en weer met nieuwe energie vanuit mijzelf verder kon. Daardoor heb ik weer een baan waarbij mijn ervaring en kennis samenkomen.",
+    author: "Erik Nieuwenweg",
+    role: "Adviseur Informatiemanagement - Zuidasdok Amsterdam bij Van Dijk Employment",
+  },
+  {
+    quote: "Via een collega kwam ik bij Joep terecht. En voor een goede coach rij ik graag vanuit Amsterdam naar Hilversum. Waarom is Joep een goede coach? Voor mij is het belangrijk dat ik een klik heb met een coach, dat het persoonlijk wordt en dat je alles tegen elkaar kunt zeggen. Bij Joep was dat zo. Hij wist mij goed te doorgronden en heeft goede zaadjes in mijn hoofd geplant. Dank voor dit traject Joep!",
+    author: "Dennis Rekers",
+    role: "Manager banqueting UVA/HVA bij CIRFOOD",
+  },
+  {
+    quote: "Samen met Joep heb ik mijn richting op een positieve, lichte en confronterende manier mogen ontdekken. Door vragen te stellen of opdrachten te geven die ik niet had zien aankomen heeft hij mij erg geholpen. Dit omdat ik juist uit die oude gewoontes/patronen ging stappen. Heel erg bedankt.",
+    author: "Ilja van Vliet",
+    role: "Positief-Behulpzaam-Integer-Oplossingsgericht",
+  },
+  {
+    quote: "Joep is een coach bij wie ik me direct op mijn gemak voelde, een erg belangrijke vereiste in een coachingstraject. Op een vriendelijke manier komt hij wel snel to the point. In de eerste sessie al werd ik behoorlijk geactiveerd om na te denken over wat mij werkelijk drijft en wat mij tegenhoudt om dat uit te leven. Ik vind de wijze waarop Joep de begeleiding invult, erg nuttig, activerend en verhelderend. Joep is een man met levenservaring die doorleeft wat hij zegt. Een fijne gesprekspartner.",
+    author: "Jannie van der Hulst",
+    role: "Medewerker personeelsadministratie bij Zonnehuisgroep Amstelland",
+  },
+  {
+    quote: "Met Joep heb ik al binnen een paar gesprekken mooie stappen kunnen maken. Het voelt alsof we onbevangen en gezellig hebben zitten kletsen, maar daarbij zijn we toch vooral stevig de diepte in gegaan. Juist omdat dit zo natuurlijk en vanzelfsprekend ging, heeft mij dat erg geholpen. Bedankt Joep voor dat stukje bagage dat je me mezelf hebt mee laten nemen.",
+    author: "Jan van As",
+    role: "Cijfers vertellen een verhaal",
+  },
+  {
+    quote: "Bij Joep voel je je direct op je gemak. Met humor houd hij je de spiegel voor. Eigenlijk weet je het wel, maar soms heb je een duwtje nodig. Regelmatig toetst hij of je al dichter bij je coachingsdoel komt. Op een fijne, ongedwongen manier laat hij je ontdekken... Bedankt Joep!",
+    author: "Moniek Noordermeer-Berents",
+    role: "Sustainability Excellence voor Food Productie Bedrijven",
+  },
+  {
+    quote: "Ik heb enige tijd geleden een loopbaantraject doorlopen bij Joep en hem in deze periode leren kennen als een zeer kundige coach. Hij heeft mij in het traject begeleid en ook oog gehad voor het persoonlijke aspect binnen mijn loopbaan. Zijn begeleiding heeft mij in staat gesteld om inzage te krijgen in een aantal persoonlijke blokkades en hoe ik deze het hoofd kon bieden. Al met al een zeer waardevol traject en samenwerking die voor mij heel veel heeft betekend en mij verder heeft gebracht in mijn denken en functioneren. Iets waar ik Joep dankbaar voor ben en iedereen aan kan raden om een dergelijk traject met hem in te gaan.",
+    author: "Bastiaan de Leeuw",
+    role: "Marketing Manager at Casio Benelux B.V.",
+  },
+  {
+    quote: "Ik heb veel gehad aan mijn coachingsgesprekken met Joep. Hij luistert goed, en kwam met heel doelmatige en pragmatische oefeningen die ik direct goed kon toepassen! Ik kan Joep dan ook zeker aanbevelen!",
+    author: "Marieke Plomp",
+    role: "Woordvoerder / Communicatiespecialist",
+  },
+  {
+    quote: "Ik kende Joep al van lang geleden. Ik liep rond met vragen rondom de invulling van mijn werk en de toekomst. Vanuit mijn vraagstellingen zijn we samen aan de slag gegaan waarbij Joep met een verfrissende aanpak, middels leuke en creatieve methodes mij verder bracht. Soms confronterend op een respectvolle manier. Joep is mensgericht en zijn inzet werkt motiverend, ik kreeg er energie van! Een fijne combinatie van coachend, aanzet om zelf aan de slag te gaan, nuchterheid, realisme en menselijkheid. Joep, veel succes met jouw eigen activiteiten. We meet again!",
+    author: "Rob Van Vollenhoven",
+    role: "Sr. Project manager Business Development at Oost NL",
+  },
+  {
+    quote: "Het is inmiddels meer dan 2 jaar geleden dat ik een aantal coachingsessies bij Joep heb gehad. Niet lang nadat we afsloten heb ik mijn baan opgezegd en inmiddels werk ik bijna 2 jaar in de rol van mijn dromen. Ik kan me geen andere functie indenken die op dit moment beter bij me past dan deze en daar geniet ik al twee jaar van. De uitkomsten uit het coachingstraject hebben me naar deze rol gebracht. Bedankt!",
+    author: "Machteld Hiemstra",
+    role: "People Lead | Connecting people and teams with organisational strategy | Talent management",
+  },
+  {
+    quote: "Joep is een gemotiveerde loopbaancoach, die mij erg heeft geholpen keuzes te maken en helder te krijgen wat mijn innerlijke drijfveren zijn. Het was ook heel fijn om met hem samen te reflecteren op de dingen die ik doe of juist niet doe. De ideale job en werkomgeving daar ben ik zelf verantwoordelijk voor, maar Joep heeft me handreikingen gegeven hoe ik daar naar toe kan werken.",
+    author: "Ivette Groenendijk",
+    role: "Project Leader Transition",
+  },
+  {
+    quote: "Joep heb ik leren kennen als een hands on coach, direct en effectief. Heeft mij binnen enkele sessies goed geholpen met mijn motivaties, onbewuste gedrag én praktische tips voor omgang met werkgever. Elke sessie leverde energie op!",
+    author: "Fokko Kroesen",
+    role: "Sr. Advisor Sustainability, Royal Schiphol Group",
+  },
+  {
+    quote: "Het heeft me goed gedaan enkele coachingsessies bij Joep te volgen. Al na de eerste bijeenkomst zat ik te brullen in de auto terug naar huis, omdat het tot me doordrong hoe ik geleefd werd door mijn 'heilige plicht'-gevoel. Joep liet het volkomen aan mij over hoe de volgende sessies werden ingevuld. Hij was open, serieus, provocerend, geïnteresseerd. Ik voel me bevrijd van oude overtuigingen, minder angstig en opgewekter dan vóór onze gesprekken. Joep is een goeie.",
+    author: "Judith Kamerman",
+    role: "Zangeres, zangdocent en zorgverlener",
+  },
+  {
+    quote: "Joep heeft mij wakker geschud. Ik zat een beetje vast in mijn comfort zone in mijn laatste werkomgeving. Hij heeft mij geleerd om stappen te ondernemen en durf te tonen om te komen waar je wilt zijn. Die gok heb ik inmiddels genomen, en sinds 1 november heb ik een nieuwe job! Dank voor de wake-up call Joep....",
+    author: "Michiel Adriaansens",
+    role: "Financieel administratief medewerker bij DDJ Media",
+  },
+  {
+    quote: "Met zijn joviale karakter stelde Joep mij meteen op mijn gemak. Door de juiste vragen te stellen, vaak op een prikkelende manier en soms door middel van spelletjes, heeft hij mij geholpen inzicht te krijgen in de voorwaarden waar mijn baan en werkomgeving aan moeten voldoen. Ik ontdekte dat ik mezelf behoorlijk wat beperkingen had opgelegd; die wist Joep met zijn nuchterheid weg te nemen. Hij heeft mij de tools gegeven om de volgende stap te maken.",
+    author: "Pascale Muller",
+    role: "Marketer | Bilingual French-Dutch",
+  },
+  {
+    quote: "In de afgelopen maanden heb ik bij en met Joep een loopbaantraject doorlopen. Dat was zeer verhelderend en stimulerend en heeft mij doen besluiten een switch te maken. Niet alleen wat betreft mijn baan maar ook wat betreft mijn persoonlijke opstelling. Ik heb Joep leren kennen als een aimabele, enthousiaste coach die de spijker op zijn kop weet te slaan.",
+    author: "Tony Suijkerbuijk",
+    role: "",
+  },
+  {
+    quote: "Ik heb 4 sessies bij Joep gehad in het kader van 'Ontwikkeladvies voor 45-plussers'. Op een prikkende, maar ontspannen sfeer heeft Joep me laten ontdekken wat voor mij belangrijk is in werk en privé en waar mijn mogelijkheden liggen. Door op de juiste manier door te vragen was er geen ontkomen aan, maar moest ik eerlijk zijn tegen mezelf en uit mijn comfort zone treden. Ik kreeg steeds veel energie en werd enthousiast van de sessies en kan zeker verder aan de slag met de nieuwe inzichten. Ik kan dit aanbevelen voor iedereen die eens kritisch in de spiegel wil kijken.... Bedankt Joep.",
+    author: "Han Oost",
+    role: "PMO Professional at NOKIA",
+  },
+  {
+    quote: "Ik heb Joep een aantal keren gesproken in het kader van het 45+ loopbaantraject. In een turbulente periode heeft hij me geholpen eens op een andere manier naar mijn loopbaan en ontwikkeling te kijken.",
+    author: "Jessica Rijnbout",
+    role: "Hogeschooldocent bij Hogeschool Utrecht",
+  },
+  {
+    quote: "Ik ben bij Joep geweest voor ontwikkeladvies, en dat was erg leerzaam en leuk. Hij weet snel door te dringen tot de kern van de zaak, op een leuke en ontspannen manier. Ik heb veel nieuwe en nuttige inzichten opgedaan, en kreeg door onze gesprekken ook genoeg vertrouwen en durf om daar iets mee te gaan doen. En dat bevalt heel goed, dankjewel Joep!",
+    author: "Margreet van de Burgt",
+    role: "Freelance grafisch ontwerper bij MVDBD",
+  },
+  {
+    quote: "Begin dit jaar ben ik gestopt met mijn studie en wist ik niet goed wat ik in de plaats moest gaan doen. Joep heeft mij toen fantastisch geholpen met het kiezen van de juiste studierichting en het ontdekken van mijn kwaliteiten. Ik was verbaast over het resultaat. Ben je zoekende of heb jij een duwtje in de juiste richting nodig? Dan is hij dé geschikte persoon om je een handje te helpen! Zowel professioneel en betrouwbaar als zeer vriendelijk en makkelijk in de omgang. En een hele toffe kerel. Je staat versteld van het resultaat, wat mij persoonlijk altijd bij zal blijven en zal blijven helpen.",
+    author: "Merlijn van de Munt",
+    role: "Student bij Universiteit van Amsterdam",
+  },
+];
+---
+
+<BaseLayout
+  title="Aanbevelingen"
+  description="Wat cliënten zeggen over loopbaancoach Joep Lochtenberg in Hilversum. Lees ervaringen van mensen die hij heeft begeleid bij loopbaanvragen, re-integratie en outplacement."
+>
+
+  <!-- Hero -->
+  <section class="bg-primary text-white py-20">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h1 class="font-heading font-bold text-4xl md:text-5xl mb-6">Aanbevelingen</h1>
+      <p class="text-white/85 text-xl leading-relaxed max-w-2xl mx-auto">
+        Ervaringen van mensen die ik heb mogen begeleiden in hun loopbaan. Lees wat zij zeggen over de samenwerking.
+      </p>
+    </div>
+  </section>
+
+  <!-- Intro tekst -->
+  <section class="bg-background py-12">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <p class="text-muted text-lg leading-relaxed">
+        De beste aanbeveling is die van mensen die het zelf hebben ervaren. Hieronder leest u ervaringen van cliënten die ik heb begeleid bij loopbaancoaching, re-integratie, outplacement en de werkenergieanalyse. Namen worden met toestemming gedeeld.
+      </p>
+    </div>
+  </section>
+
+  <!-- Testimonials grid -->
+  <section class="bg-section-alt py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {testimonials.map((t) => (
+          <TestimonialCard quote={t.quote} author={t.author} role={t.role} />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- LinkedIn blok -->
+  <section class="bg-background py-16">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="font-heading font-bold text-2xl text-primary mb-4">Meer aanbevelingen op LinkedIn</h2>
+      <p class="text-muted mb-6">
+        Bekijk ook de aanbevelingen op mijn LinkedIn-profiel voor meer ervaringen van cliënten en samenwerkingspartners.
+      </p>
+      <a
+        href="https://www.linkedin.com/in/joeplochtenberg"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center gap-3 bg-[#0077B5] text-white font-semibold px-6 py-3 rounded-full hover:bg-[#005f8e] transition-colors"
+      >
+        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+        </svg>
+        Bekijk mijn LinkedIn-profiel
+      </a>
+    </div>
+  </section>
+
+  <CTASection
+    title="Ook ervaring opdoen met coaching?"
+    subtitle="Neem contact op voor een vrijblijvend kennismakingsgesprek. Samen bekijken we wat ik voor uw loopbaan kan betekenen."
+    href="/contact"
+    btnText="Plan een gratis kennismaking"
+  />
+
+</BaseLayout>

@@ -1,0 +1,155 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import SectionTitle from '../../components/SectionTitle.astro';
+import CTASection from '../../components/CTASection.astro';
+---
+
+<BaseLayout
+  title="Werkenergieanalyse"
+  description="De Werkenergieanalyse van Joep Lochtenberg in Hilversum. Inzicht in uw werkstressoren en energiebronnen voor meer werkplezier en vitaliteit."
+>
+
+  <!-- Hero -->
+  <section class="bg-primary text-white py-20">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <span class="text-accent font-semibold uppercase text-sm tracking-wider mb-4 block">Dienst</span>
+      <h1 class="font-heading font-bold text-4xl md:text-5xl mb-6">Werkenergieanalyse</h1>
+      <p class="text-white/85 text-xl leading-relaxed max-w-2xl mx-auto">
+        Ontdek wat u energie geeft en wat energie kost in uw werk. Een wetenschappelijk onderbouwd instrument voor meer werkplezier en duurzame inzetbaarheid.
+      </p>
+      <div class="mt-8 flex flex-wrap justify-center gap-4">
+        <a href="/contact" class="bg-accent text-white font-semibold px-7 py-3 rounded-full hover:bg-white hover:text-accent transition-colors shadow-lg">
+          Plan een gratis kennismaking
+        </a>
+        <a href="/werkenergieanalyse/waarom-een-werkenergieanalyse" class="border-2 border-white text-white font-semibold px-7 py-3 rounded-full hover:bg-white hover:text-primary transition-colors">
+          Waarom een werkenergieanalyse?
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Wat is de werkenergieanalyse? -->
+  <section class="bg-background py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="font-heading font-bold text-3xl text-primary mb-5">Wat is de Werkenergieanalyse?</h2>
+          <p class="text-muted leading-relaxed mb-4">
+            De Werkenergieanalyse is een wetenschappelijk onderbouwd instrument dat inzicht geeft in de verhouding tussen werkstressoren en energiebronnen in uw werk. Het is gebaseerd op het Job Demands-Resources (JD-R) model, een internationaal erkende theorie over werkstress en bevlogenheid.
+          </p>
+          <p class="text-muted leading-relaxed mb-4">
+            Via een uitgebreide vragenlijst meten we hoe u uw werklast, autonomie, sociale steun, groeimogelijkheden en andere factoren ervaart. De resultaten worden vertaald naar een persoonlijk rapport met concrete aanbevelingen.
+          </p>
+          <p class="text-muted leading-relaxed mb-4">
+            De analyse is beschikbaar voor individuen, teams en organisaties. Voor werkgevers biedt het waardevolle inzichten in de vitaliteit en duurzame inzetbaarheid van hun medewerkers.
+          </p>
+          <div class="flex flex-wrap gap-3 mt-6">
+            <a href="/werkenergieanalyse/werkenergieanalyse" class="text-accent font-semibold hover:text-primary transition-colors inline-flex items-center gap-1">
+              Meer over de analyse →
+            </a>
+          </div>
+        </div>
+        <div>
+          <img
+            src="/images/werkenergieanalyse-infographic.png"
+            alt="Werkenergieanalyse infographic"
+            class="rounded-2xl shadow-xl w-full"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Submenu navigatie -->
+  <section class="bg-section-alt py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <SectionTitle
+        title="Ontdek de Werkenergieanalyse"
+        subtitle="Leer meer over de verschillende aspecten van de werkenergieanalyse."
+      />
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {[
+          {
+            title: 'Waarom een Werkenergieanalyse?',
+            desc: 'Ontdek waarom werkplezier en vitaliteit zo belangrijk zijn en wat de werkenergieanalyse u kan opleveren.',
+            href: '/werkenergieanalyse/waarom-een-werkenergieanalyse',
+          },
+          {
+            title: 'De Werkenergieanalyse',
+            desc: 'Alles over het instrument zelf: hoe het werkt, wat het meet en wat u kunt verwachten.',
+            href: '/werkenergieanalyse/werkenergieanalyse',
+          },
+          {
+            title: 'Online Coaching',
+            desc: 'De werkenergieanalyse gecombineerd met online coaching: flexibel, effectief en persoonlijk.',
+            href: '/werkenergieanalyse/online-coaching',
+          },
+          {
+            title: 'Werkstressoren & Energiebronnen',
+            desc: 'Begrijp welke factoren stress veroorzaken en welke energie geven in uw werkomgeving.',
+            href: '/werkenergieanalyse/werkstressoren-energiebronnen',
+          },
+          {
+            title: 'In Company voor Werkgevers',
+            desc: 'De werkenergieanalyse als instrument voor organisaties om de vitaliteit van medewerkers te versterken.',
+            href: '/werkenergieanalyse/in-company-werkgevers',
+          },
+          {
+            title: 'Gratis kennismaking',
+            desc: 'Nieuwsgierig geworden? Plan een vrijblijvend kennismakingsgesprek en ontdek wat de analyse voor u kan doen.',
+            href: '/contact',
+          },
+        ].map((card) => (
+          <a
+            href={card.href}
+            class="bg-white rounded-xl p-6 shadow-md hover:-translate-y-1 hover:shadow-xl transition-all duration-300 block group"
+          >
+            <h3 class="font-heading font-semibold text-lg text-primary mb-3 group-hover:text-accent transition-colors">{card.title}</h3>
+            <p class="text-muted text-sm leading-relaxed mb-3">{card.desc}</p>
+            <span class="text-accent font-semibold text-sm inline-flex items-center gap-1">
+              Lees meer <span aria-hidden="true">→</span>
+            </span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Voordelen -->
+  <section class="bg-background py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <SectionTitle
+        title="Voordelen van de Werkenergieanalyse"
+        subtitle="Wat levert de werkenergieanalyse u op?"
+      />
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {[
+          { title: 'Zelfkennis', desc: 'U krijgt diep inzicht in wat u motiveert, energiegeeft en belast in uw werk. Dit vormt de basis voor bewuste keuzes.' },
+          { title: 'Preventie', desc: 'Door vroeg te signaleren wat uw energiebalans verstoort, voorkomt u burn-out, uitval en langdurig verzuim.' },
+          { title: 'Duurzame inzetbaarheid', desc: 'U leert hoe u uw vitaliteit op peil houdt, ook op langere termijn. Noodzakelijk in een veranderende arbeidsmarkt.' },
+          { title: 'Concrete actieplannen', desc: 'De analyse resulteert altijd in praktische aanbevelingen en een actieplan dat u direct kunt toepassen.' },
+        ].map((item) => (
+          <div class="flex items-start gap-5 bg-surface rounded-xl p-6 shadow-sm">
+            <div class="w-10 h-10 bg-accent rounded-full flex items-center justify-center flex-shrink-0">
+              <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-heading font-semibold text-lg text-primary mb-2">{item.title}</h3>
+              <p class="text-muted leading-relaxed text-sm">{item.desc}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <CTASection
+    title="Wilt u meer werkplezier en vitaliteit?"
+    subtitle="Plan een vrijblijvend kennismakingsgesprek en ontdek wat de Werkenergieanalyse voor u kan betekenen."
+    href="/contact"
+    btnText="Plan een gratis kennismaking"
+  />
+
+</BaseLayout>

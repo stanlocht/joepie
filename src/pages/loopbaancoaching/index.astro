@@ -1,0 +1,151 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import SectionTitle from '../../components/SectionTitle.astro';
+import CTASection from '../../components/CTASection.astro';
+---
+
+<BaseLayout
+  title="Loopbaancoaching"
+  description="Loopbaancoaching in Hilversum door Joep Lochtenberg. Professionele begeleiding bij loopbaanvragen, carrièreswitch en loopbaanplanning."
+>
+
+  <!-- Hero -->
+  <section class="bg-primary text-white py-20">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <span class="text-accent font-semibold uppercase text-sm tracking-wider mb-4 block">Dienst</span>
+      <h1 class="font-heading font-bold text-4xl md:text-5xl mb-6">Loopbaancoaching</h1>
+      <p class="text-white/85 text-xl leading-relaxed max-w-2xl mx-auto">
+        Samen werken we aan een helder loopbaanpad dat aansluit bij uw talenten, waarden en ambities.
+      </p>
+    </div>
+  </section>
+
+  <!-- Wat is loopbaancoaching? -->
+  <section class="bg-background py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="font-heading font-bold text-3xl text-primary mb-5">Wat is loopbaancoaching?</h2>
+          <p class="text-muted leading-relaxed mb-4">
+            Loopbaancoaching helpt u bij het maken van bewuste keuzes in uw loopbaan. Of u nu vastloopt in uw huidige functie, op zoek bent naar een nieuwe uitdaging, of toe bent aan een carrièreswitch – samen werken we aan een helder loopbaanpad.
+          </p>
+          <p class="text-muted leading-relaxed mb-4">
+            In het coachingstraject staan uw talenten, waarden, drijfveren en ambities centraal. We onderzoeken wat u energie geeft in uw werk en wat u werkelijk wilt bereiken. Op basis hiervan formuleren we concrete doelen en stappen.
+          </p>
+          <p class="text-muted leading-relaxed">
+            Loopbaancoaching is geen therapie, maar een resultaatgericht proces waarbij u zelf de regie houdt. Ik begeleid u als sparringpartner en spiegel, zodat u betere keuzes kunt maken die passen bij wie u bent.
+          </p>
+        </div>
+        <div class="bg-section-alt rounded-2xl p-8">
+          <h3 class="font-heading font-semibold text-xl text-primary mb-5">Wanneer is loopbaancoaching nuttig?</h3>
+          <ul class="space-y-3">
+            {[
+              'U voelt zich vastgelopen in uw huidige functie of organisatie',
+              'U overweegt een carrièreswitch maar weet niet waar te beginnen',
+              'U wilt meer werkplezier en voldoening in uw loopbaan',
+              'U staat voor een belangrijke loopbaanbeslissing',
+              'U wilt uw professionele identiteit en richting versterken',
+              'U zoekt werk dat beter aansluit bij uw waarden en talenten',
+              'U wilt uw sollicitatievaardigheden en zelfpresentatie verbeteren',
+            ].map((item) => (
+              <li class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-accent flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span class="text-muted">{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Voor wie? -->
+  <section class="bg-section-alt py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <SectionTitle
+        title="Voor wie is loopbaancoaching bedoeld?"
+        subtitle="Loopbaancoaching is voor iedereen die bewust aan zijn of haar loopbaan wil werken."
+      />
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {[
+          {
+            title: 'Werkenden',
+            desc: 'U bent in dienst maar ervaart onvoldoening, wilt groeien of overweegt een overstap naar een andere functie of sector.',
+          },
+          {
+            title: 'Werkzoekenden',
+            desc: 'U bent op zoek naar een nieuwe baan en wilt uw zoekproces professionaliseren. We werken aan uw positionering, netwerk en sollicitatievaardigheden.',
+          },
+          {
+            title: 'Zelfstandigen',
+            desc: 'U bent ZZP\'er of ondernemer en wilt uw professionele richting aanscherpen, of overweegt de overstap naar of van zelfstandig ondernemerschap.',
+          },
+        ].map((card) => (
+          <div class="bg-white rounded-xl p-6 shadow-md">
+            <h3 class="font-heading font-semibold text-xl text-primary mb-3">{card.title}</h3>
+            <p class="text-muted leading-relaxed">{card.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Het traject -->
+  <section class="bg-background py-20">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <SectionTitle
+        title="Het traject"
+        subtitle="Een loopbaancoachingstraject bestaat gemiddeld uit 6 tot 10 gesprekken van een uur, verspreid over enkele maanden."
+      />
+      <div class="space-y-6">
+        {[
+          {
+            step: '01',
+            title: 'Intakegesprek (gratis)',
+            desc: 'We maken kennis en bespreken uw situatie, wensen en doelen. U ontvangt een offerte op maat. Geen verplichtingen.',
+          },
+          {
+            step: '02',
+            title: 'Zelfinzicht & zelfonderzoek',
+            desc: 'We werken aan inzicht in uw talenten, waarden, drijfveren en loopbaanidentiteit. Gebruik van bewezen instrumenten zoals de RLP-methode.',
+          },
+          {
+            step: '03',
+            title: 'Verkenning & oriëntatie',
+            desc: 'We onderzoeken loopbaanopties die passen bij uw profiel. U verdiept uw kennis van de arbeidsmarkt en ontdekt nieuwe mogelijkheden.',
+          },
+          {
+            step: '04',
+            title: 'Keuze & actieplan',
+            desc: 'U maakt een bewuste keuze voor uw loopbaanrichting en stelt een concreet actieplan op met haalbare stappen.',
+          },
+          {
+            step: '05',
+            title: 'Implementatie & begeleiding',
+            desc: 'U voert uw plan uit terwijl ik u blijf begeleiden. We evalueren, stellen bij waar nodig en zorgen dat u op koers blijft.',
+          },
+        ].map((item) => (
+          <div class="flex gap-6 items-start">
+            <div class="w-14 h-14 bg-primary text-white rounded-full flex items-center justify-center flex-shrink-0 font-heading font-bold text-sm">
+              {item.step}
+            </div>
+            <div class="bg-white rounded-xl p-5 shadow-sm flex-1">
+              <h3 class="font-heading font-semibold text-lg text-primary mb-2">{item.title}</h3>
+              <p class="text-muted leading-relaxed">{item.desc}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <CTASection
+    title="Klaar om uw loopbaan in eigen handen te nemen?"
+    subtitle="Plan een vrijblijvend kennismakingsgesprek. Samen kijken we wat loopbaancoaching voor u kan betekenen."
+    href="/contact"
+    btnText="Plan een gratis kennismaking"
+  />
+
+</BaseLayout>

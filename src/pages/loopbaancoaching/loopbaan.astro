@@ -1,0 +1,153 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import SectionTitle from '../../components/SectionTitle.astro';
+import CTASection from '../../components/CTASection.astro';
+---
+
+<BaseLayout
+  title="Loopbaan"
+  description="Informatie over loopbaanplanning en loopbaanontwikkeling door Joep Lochtenberg, loopbaancoach in Hilversum."
+>
+
+  <!-- Hero -->
+  <section class="bg-primary text-white py-20">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <span class="text-accent font-semibold uppercase text-sm tracking-wider mb-4 block">Loopbaancoaching</span>
+      <h1 class="font-heading font-bold text-4xl md:text-5xl mb-6">Uw loopbaan</h1>
+      <p class="text-white/85 text-xl leading-relaxed max-w-2xl mx-auto">
+        Uw loopbaan is een reis. Ik help u die reis bewust en met richting te maken.
+      </p>
+    </div>
+  </section>
+
+  <!-- Intro -->
+  <section class="bg-background py-20">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="prose prose-lg max-w-none">
+        <h2 class="font-heading font-bold text-3xl text-primary mb-5">Wat verstaan we onder 'loopbaan'?</h2>
+        <p class="text-muted leading-relaxed mb-4">
+          Een loopbaan is veel meer dan een reeks functies en werkgevers. Het is het totale beeld van uw professionele leven: de keuzes die u maakt, de ervaringen die u opdoet, de vaardigheden die u ontwikkelt en de betekenis die u hecht aan uw werk.
+        </p>
+        <p class="text-muted leading-relaxed mb-4">
+          Een bewust geleefde loopbaan begint bij zelfinzicht: weten wie u bent, wat u drijft, wat u kunt en wat u wilt. Dat inzicht vormt het fundament voor elke goede loopbaankeuze.
+        </p>
+        <p class="text-muted leading-relaxed mb-8">
+          Als loopbaancoach begeleid ik u bij het verdiepen van dat zelfinzicht en het vertalen ervan naar concrete stappen in uw loopbaan.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Loopbaanfases -->
+  <section class="bg-section-alt py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <SectionTitle
+        title="Loopbaanfases en uitdagingen"
+        subtitle="Elke fase van uw loopbaan kent eigen uitdagingen en kansen."
+      />
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        {[
+          {
+            fase: 'Start & Oriëntatie',
+            jaren: '0–5 jaar',
+            desc: 'U verdiept uw vakkennis, ontdekt uw sterktes en zoekt uw plek in de arbeidsmarkt. Vragen als: "Wat wil ik worden?" en "Pas ik hier?"',
+            color: 'bg-accent',
+          },
+          {
+            fase: 'Groei & Verdieping',
+            jaren: '5–15 jaar',
+            desc: 'U bouwt expertise op, neemt meer verantwoordelijkheid en denkt na over verdere specialisatie of verbreding van uw rol.',
+            color: 'bg-primary',
+          },
+          {
+            fase: 'Consolidatie & Koerswijziging',
+            jaren: '15–30 jaar',
+            desc: 'U bereikt een plateau en vraagt zich af: "Is dit het?" Sommigen kiezen voor verdieping, anderen voor een ingrijpende carrièreswitch.',
+            color: 'bg-gold',
+          },
+          {
+            fase: 'Late loopbaan & Overdracht',
+            jaren: '30+ jaar',
+            desc: 'U denkt na over erfenis en betekenis. Hoe draagt u uw kennis over? Hoe geeft u richting aan uw laatste werkjaren?',
+            color: 'bg-muted',
+          },
+        ].map((item) => (
+          <div class="bg-white rounded-xl overflow-hidden shadow-md">
+            <div class={`${item.color} h-2`}></div>
+            <div class="p-6">
+              <p class="text-accent font-semibold text-sm mb-1">{item.jaren}</p>
+              <h3 class="font-heading font-semibold text-lg text-primary mb-3">{item.fase}</h3>
+              <p class="text-muted text-sm leading-relaxed">{item.desc}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Loopbaaninstrumenten -->
+  <section class="bg-background py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <SectionTitle
+        title="Instrumenten en methoden"
+        subtitle="Ik werk met bewezen methodieken die u helpen uw loopbaan beter te begrijpen en te sturen."
+      />
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {[
+          {
+            title: 'RLP-methode',
+            desc: 'De Registratie Loopbaan Professie methode is een gestructureerde aanpak voor loopbaancoaching, erkend door NOLOC. Centraal staat uw persoonlijke en professionele ontwikkeling.',
+          },
+          {
+            title: 'Talenten- en waardenonderzoek',
+            desc: 'Via gevalideerde vragenlijsten en gesprekken brengen we uw kerntalenten en diepste waarden in kaart. Dit vormt het fundament van uw loopbaankeuzes.',
+          },
+          {
+            title: 'Arbeidsmarktoriëntatie',
+            desc: 'We analyseren de arbeidsmarkt in uw vakgebied, verkennen kansen en bedreigingen, en bepalen hoe u zich optimaal kunt positioneren.',
+          },
+        ].map((card) => (
+          <div class="border-t-4 border-accent bg-white rounded-xl p-6 shadow-md">
+            <h3 class="font-heading font-semibold text-xl text-primary mb-3">{card.title}</h3>
+            <p class="text-muted leading-relaxed">{card.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Praktische info -->
+  <section class="bg-section-alt py-16">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-white rounded-2xl p-8 shadow-md">
+        <h2 class="font-heading font-bold text-2xl text-primary mb-6">Praktische informatie</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div>
+            <h3 class="font-semibold text-primary mb-2">Locatie</h3>
+            <p class="text-muted text-sm">Gesprekken vinden plaats in Hilversum of, indien gewenst, online via videobellen.</p>
+          </div>
+          <div>
+            <h3 class="font-semibold text-primary mb-2">Duur</h3>
+            <p class="text-muted text-sm">Een traject duurt gemiddeld 3 tot 6 maanden, afhankelijk van uw situatie en doelen.</p>
+          </div>
+          <div>
+            <h3 class="font-semibold text-primary mb-2">Sessies</h3>
+            <p class="text-muted text-sm">Elk gesprek duurt ongeveer 60 tot 90 minuten. Gemiddeld 6 tot 10 gesprekken per traject.</p>
+          </div>
+          <div>
+            <h3 class="font-semibold text-primary mb-2">Vergoeding</h3>
+            <p class="text-muted text-sm">Sommige werkgevers vergoeden loopbaancoaching. Vraag gerust naar de mogelijkheden in uw situatie.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <CTASection
+    title="Begin vandaag nog aan uw loopbaanreis"
+    subtitle="Neem contact op voor een vrijblijvend kennismakingsgesprek en ontdek wat ik voor uw loopbaan kan betekenen."
+    href="/contact"
+    btnText="Neem contact op"
+  />
+
+</BaseLayout>

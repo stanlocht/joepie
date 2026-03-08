@@ -1,0 +1,127 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import SectionTitle from '../../components/SectionTitle.astro';
+import CTASection from '../../components/CTASection.astro';
+---
+
+<BaseLayout
+  title="Online Coaching"
+  description="Online coaching gecombineerd met de Werkenergieanalyse door Joep Lochtenberg. Flexibele coaching via video, effectief en persoonlijk."
+>
+
+  <!-- Hero -->
+  <section class="bg-primary text-white py-20">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <span class="text-accent font-semibold uppercase text-sm tracking-wider mb-4 block">Werkenergieanalyse</span>
+      <h1 class="font-heading font-bold text-4xl md:text-5xl mb-6">Online Coaching</h1>
+      <p class="text-white/85 text-xl leading-relaxed max-w-2xl mx-auto">
+        Professionele coaching vanuit het comfort van uw eigen omgeving. Effectief, flexibel en volledig persoonlijk.
+      </p>
+    </div>
+  </section>
+
+  <!-- Wat is online coaching? -->
+  <section class="bg-background py-20">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="font-heading font-bold text-3xl text-primary mb-5">Wat is online coaching?</h2>
+      <p class="text-muted leading-relaxed mb-4">
+        Online coaching is een moderne en effectieve vorm van loopbaancoaching waarbij de gesprekken plaatsvinden via video. U heeft dezelfde persoonlijke aandacht en begeleiding als bij een face-to-face gesprek, maar dan vanuit de flexibiliteit van uw eigen locatie.
+      </p>
+      <p class="text-muted leading-relaxed mb-4">
+        De Werkenergieanalyse leent zich uitstekend voor online begeleiding. De vragenlijst wordt digitaal ingevuld, het rapport wordt digitaal gedeeld en het besprekingsgesprek vindt online plaats. Een volledig traject is mogelijk zonder ook maar één keer naar Hilversum te hoeven reizen.
+      </p>
+      <p class="text-muted leading-relaxed mb-8">
+        Onderzoek toont aan dat online coaching even effectief is als traditionele face-to-face coaching. Het biedt bovendien voordelen op het gebied van flexibiliteit, reistijdbesparing en toegankelijkheid.
+      </p>
+    </div>
+  </section>
+
+  <!-- Voordelen -->
+  <section class="bg-section-alt py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <SectionTitle
+        title="Voordelen van online coaching"
+        subtitle="Online coaching heeft unieke voordelen ten opzichte van traditionele face-to-face coaching."
+      />
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {[
+          {
+            icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>`,
+            title: 'Flexibel & Tijdbesparend',
+            desc: 'Geen reistijd, geen parkeerproblemen. U kiest zelf wanneer en waar u de sessie volgt, ook \'s avonds of in uw lunchpauze.',
+          },
+          {
+            icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064" /></svg>`,
+            title: 'Overal bereikbaar',
+            desc: 'Woont u buiten de regio Hilversum? Online coaching maakt professionele loopbaancoaching bereikbaar voor iedereen in Nederland.',
+          },
+          {
+            icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>`,
+            title: 'Veilig & Privé',
+            desc: 'U spreekt vanuit uw eigen vertrouwde omgeving. Dat geeft rust en openheid. Gesprekken zijn volledig vertrouwelijk.',
+          },
+          {
+            icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" /></svg>`,
+            title: 'Even effectief',
+            desc: 'Wetenschappelijk onderzoek bevestigt dat online coaching dezelfde resultaten oplevert als face-to-face coaching.',
+          },
+          {
+            icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12" /></svg>`,
+            title: 'Digitale materialen',
+            desc: 'Alle instrumenten, opdrachten en rapporten worden digitaal gedeeld. Altijd en overal terug te vinden.',
+          },
+          {
+            icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" /></svg>`,
+            title: 'Persoonlijk contact',
+            desc: 'Video brengt u face-to-face. U ziet en hoort mij, en ik zie en hoor u. Dat is de basis voor een goed coachingsgesprek.',
+          },
+        ].map((card) => (
+          <div class="bg-white rounded-xl p-6 shadow-md">
+            <div class="w-12 h-12 bg-section-alt rounded-lg flex items-center justify-center text-accent mb-4">
+              <Fragment set:html={card.icon} />
+            </div>
+            <h3 class="font-heading font-semibold text-lg text-primary mb-3">{card.title}</h3>
+            <p class="text-muted text-sm leading-relaxed">{card.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Hoe het werkt -->
+  <section class="bg-background py-20">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <SectionTitle
+        title="Hoe werkt het?"
+        subtitle="Online coaching is eenvoudig en toegankelijk. Alles wat u nodig heeft is een computer of tablet met internetverbinding."
+      />
+      <div class="space-y-6">
+        {[
+          { step: '1', title: 'Aanmelding en intake', desc: 'U meldt zich aan via het contactformulier. We plannen een kennismakingsgesprek via video of telefoon en bespreken uw situatie en wensen.' },
+          { step: '2', title: 'Digitale vragenlijst', desc: 'U ontvangt een link naar de online vragenlijst. Deze vult u in op een moment dat u past. Het duurt circa 20-30 minuten.' },
+          { step: '3', title: 'Rapport en voorbereiding', desc: 'Ik verwerk de resultaten en maak uw persoonlijk rapport. U ontvangt dit digitaal ter voorbereiding op het coachingsgesprek.' },
+          { step: '4', title: 'Online coachingsgesprekken', desc: 'We spreken via video (bijv. Zoom of Teams). De gesprekken duren 60-90 minuten. U kiest zelf een geschikt tijdstip.' },
+          { step: '5', title: 'Actieplan en follow-up', desc: 'Na de gesprekken stellen we een actieplan op. U ontvangt digitale opdrachten en we plannen eventuele follow-upgesprekken.' },
+        ].map((item) => (
+          <div class="flex gap-5 items-start">
+            <div class="w-12 h-12 bg-accent text-white rounded-full flex items-center justify-center flex-shrink-0 font-heading font-bold">
+              {item.step}
+            </div>
+            <div>
+              <h3 class="font-heading font-semibold text-lg text-primary mb-1">{item.title}</h3>
+              <p class="text-muted leading-relaxed text-sm">{item.desc}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <CTASection
+    title="Start vandaag met online coaching"
+    subtitle="Neem contact op en ontdek hoe online coaching gecombineerd met de Werkenergieanalyse uw werkplezier kan vergroten."
+    href="/contact"
+    btnText="Plan een gratis kennismaking"
+  />
+
+</BaseLayout>

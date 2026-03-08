@@ -1,0 +1,159 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const links = [
+  {
+    category: 'Beroepsverenigingen',
+    items: [
+      {
+        title: 'NOLOC – Beroepsvereniging voor loopbaanprofessionals',
+        url: 'https://www.noloc.nl',
+        desc: 'NOLOC is de beroepsvereniging voor loopbaanprofessionals in Nederland. Op de website vindt u informatie over loopbaancoaching en een register van gecertificeerde loopbaanprofessionals.',
+      },
+      {
+        title: 'Registerloopbaanprofessional (RLP)',
+        url: 'https://www.noloc.nl/rlp',
+        desc: 'Het RLP-keurmerk staat voor kwaliteit in loopbaanbegeleiding. Lees hier meer over de eisen en wat dit keurmerk inhoudt.',
+      },
+    ],
+  },
+  {
+    category: 'Re-integratie & UWV',
+    items: [
+      {
+        title: 'UWV – Werkloosheidsuitkering en re-integratie',
+        url: 'https://www.uwv.nl',
+        desc: 'Het UWV is verantwoordelijk voor werkloosheidsuitkeringen, arbeidsongeschiktheidsuitkeringen en de begeleiding van re-integratietrajecten in Nederland.',
+      },
+      {
+        title: 'Rijksoverheid – Wet verbetering poortwachter',
+        url: 'https://www.rijksoverheid.nl/onderwerpen/ziekte-en-arbeidsongeschiktheid/inhoud/re-integratie-bij-ziekte',
+        desc: 'Informatie over de Wet verbetering poortwachter en de verplichtingen van werkgevers en werknemers bij ziekteverzuim.',
+      },
+      {
+        title: 'Arboportaal',
+        url: 'https://www.arboportaal.nl',
+        desc: 'Het Arboportaal biedt informatie over arbeidsomstandigheden, verzuim, re-integratie en gezond werken voor werkgevers en werknemers.',
+      },
+    ],
+  },
+  {
+    category: 'Loopbaan & Arbeidsmarkt',
+    items: [
+      {
+        title: 'Werk.nl – Vacatures en arbeidsmarktinformatie',
+        url: 'https://www.werk.nl',
+        desc: 'Het officiële arbeidsmarktplatform van UWV en gemeenten. Vacatures, arbeidsmarktinformatie en ondersteuning voor werkzoekenden.',
+      },
+      {
+        title: 'LinkedIn',
+        url: 'https://www.linkedin.com',
+        desc: 'Het grootste professionele netwerk ter wereld. Essentieel voor netwerken, jobhunting en persoonlijk branding in uw loopbaan.',
+      },
+      {
+        title: 'Intermediair – Loopbaanadvies en vacatures',
+        url: 'https://www.intermediair.nl',
+        desc: 'Intermediair biedt nieuws, achtergrondartikelen en vacatures voor hoger opgeleiden. Met veel aandacht voor loopbaan en persoonlijke ontwikkeling.',
+      },
+    ],
+  },
+  {
+    category: 'Vitaliteit & Werkgeluk',
+    items: [
+      {
+        title: 'Trimbos-instituut – Mentale gezondheid op het werk',
+        url: 'https://www.trimbos.nl',
+        desc: 'Het Trimbos-instituut doet onderzoek naar geestelijke gezondheid en biedt praktische informatie over mentale gezondheid op de werkvloer.',
+      },
+      {
+        title: 'TNO – Onderzoek naar gezond werken',
+        url: 'https://www.tno.nl/nl/toepassingsgebieden/gezond-leven',
+        desc: 'TNO doet onderzoek naar duurzame inzetbaarheid, werkstress en vitaliteit. Met praktische tools en inzichten voor werkgevers en werknemers.',
+      },
+    ],
+  },
+];
+---
+
+<BaseLayout
+  title="Links"
+  description="Handige links over loopbaancoaching, re-integratie, vitaliteit en de Nederlandse arbeidsmarkt. Geselecteerd door Joep Lochtenberg."
+>
+
+  <!-- Hero -->
+  <section class="bg-primary text-white py-16">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h1 class="font-heading font-bold text-4xl md:text-5xl mb-4">Links</h1>
+      <p class="text-white/85 text-xl leading-relaxed">
+        Een selectie van nuttige links over loopbaancoaching, re-integratie, vitaliteit en de Nederlandse arbeidsmarkt.
+      </p>
+    </div>
+  </section>
+
+  <!-- LinkedIn highlight -->
+  <section class="bg-section-alt py-12">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-white rounded-2xl p-6 shadow-md flex flex-col sm:flex-row items-center gap-6">
+        <div class="w-16 h-16 bg-[#0077B5] rounded-2xl flex items-center justify-center flex-shrink-0">
+          <svg class="w-9 h-9 text-white" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+          </svg>
+        </div>
+        <div class="text-center sm:text-left flex-1">
+          <h2 class="font-heading font-bold text-xl text-primary mb-1">Joep op LinkedIn</h2>
+          <p class="text-muted text-sm mb-3">Volg mij op LinkedIn voor actueel nieuws, loopbaantips en inzichten over werkgeluk en vitaliteit.</p>
+          <a
+            href="https://www.linkedin.com/in/joeplochtenberg"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-2 bg-[#0077B5] text-white font-semibold px-5 py-2 rounded-full hover:bg-[#005f8e] transition-colors text-sm"
+          >
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+            </svg>
+            Bekijk LinkedIn-profiel
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Links per categorie -->
+  <section class="bg-background py-16">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="space-y-12">
+        {links.map((category) => (
+          <div>
+            <h2 class="font-heading font-bold text-2xl text-primary mb-6 pb-3 border-b-2 border-section-alt">
+              {category.category}
+            </h2>
+            <div class="space-y-4">
+              {category.items.map((link) => (
+                <div class="bg-surface rounded-xl p-5 shadow-sm hover:shadow-md transition-shadow group">
+                  <a
+                    href={link.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="flex items-start gap-3"
+                  >
+                    <div class="w-8 h-8 bg-section-alt rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5 group-hover:bg-accent transition-colors">
+                      <svg class="w-4 h-4 text-accent group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                      </svg>
+                    </div>
+                    <div>
+                      <h3 class="font-semibold text-primary group-hover:text-accent transition-colors mb-1">{link.title}</h3>
+                      <p class="text-muted text-sm leading-relaxed">{link.desc}</p>
+                      <span class="text-accent text-xs mt-1 block">{link.url}</span>
+                    </div>
+                  </a>
+                </div>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

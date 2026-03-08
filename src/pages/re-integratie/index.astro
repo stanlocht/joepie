@@ -1,0 +1,219 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import SectionTitle from '../../components/SectionTitle.astro';
+import CTASection from '../../components/CTASection.astro';
+---
+
+<BaseLayout
+  title="Re-integratie"
+  description="Re-integratie begeleiding in Hilversum door Joep Lochtenberg. Professionele ondersteuning bij spoor 1 en spoor 2 re-integratie trajecten."
+>
+
+  <!-- Hero -->
+  <section class="bg-primary text-white py-20">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <span class="text-accent font-semibold uppercase text-sm tracking-wider mb-4 block">Dienst</span>
+      <h1 class="font-heading font-bold text-4xl md:text-5xl mb-6">Re-integratie</h1>
+      <p class="text-white/85 text-xl leading-relaxed max-w-2xl mx-auto">
+        Professionele begeleiding bij terugkeer naar werk na ziekte of arbeidsongeschiktheid.
+      </p>
+    </div>
+  </section>
+
+  <!-- Wat is re-integratie? -->
+  <section class="bg-background py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+        <div>
+          <h2 class="font-heading font-bold text-3xl text-primary mb-5">Wat is re-integratie?</h2>
+          <p class="text-muted leading-relaxed mb-4">
+            Re-integratie is het proces van terugkeer naar werk na een periode van ziekte, burn-out of arbeidsongeschiktheid. Het doel is om de werknemer zo snel mogelijk en op een verantwoorde manier terug te laten keren in het arbeidsproces.
+          </p>
+          <p class="text-muted leading-relaxed mb-4">
+            De Wet verbetering poortwachter (Wvp) verplicht zowel werkgevers als werknemers om actief mee te werken aan re-integratie. Als re-integratiecoach begeleid ik zowel werknemers als werkgevers door dit complexe proces.
+          </p>
+          <p class="text-muted leading-relaxed">
+            Mijn aanpak is mensgericht: ik kijk naar de persoon achter het verzuim, naar de oorzaken en naar duurzame oplossingen. Niet alleen terugkeer, maar ook welzijn op de lange termijn staat centraal.
+          </p>
+        </div>
+        <div class="bg-section-alt rounded-2xl p-8">
+          <h3 class="font-heading font-semibold text-xl text-primary mb-5">Mijn expertise</h3>
+          <ul class="space-y-3">
+            {[
+              'Begeleiding bij langdurig verzuim en burn-out',
+              'Opstellen en uitvoeren van re-integratieplan',
+              'Communicatie tussen werknemer en werkgever',
+              'Begeleiding bij UWV-procedures en WIA-aanvragen',
+              'Spoor 1: terugkeer bij eigen werkgever',
+              'Spoor 2: zoeken naar werk bij andere werkgever',
+              'Nazorg en duurzame re-integratie',
+            ].map((item) => (
+              <li class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-accent flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span class="text-muted">{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Spoor 1 en Spoor 2 -->
+  <section class="bg-section-alt py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <SectionTitle
+        title="Spoor 1 en Spoor 2"
+        subtitle="Er zijn twee re-integratietrajecten: spoor 1 bij de eigen werkgever en spoor 2 bij een andere werkgever."
+      />
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Spoor 1 -->
+        <div class="bg-white rounded-2xl overflow-hidden shadow-md">
+          <div class="bg-primary h-2"></div>
+          <div class="p-8">
+            <div class="w-14 h-14 bg-primary rounded-full flex items-center justify-center mb-5">
+              <span class="font-heading font-bold text-xl text-white">1</span>
+            </div>
+            <h3 class="font-heading font-bold text-2xl text-primary mb-4">Spoor 1</h3>
+            <p class="text-muted leading-relaxed mb-4">
+              Spoor 1 re-integratie richt zich op terugkeer naar de eigen werkgever. Dit is altijd de eerste stap: herstel en terugkeer in de eigen functie of een aangepaste functie binnen dezelfde organisatie.
+            </p>
+            <h4 class="font-semibold text-primary mb-3">Wat houdt spoor 1 in?</h4>
+            <ul class="space-y-2 text-muted text-sm">
+              <li class="flex items-start gap-2">
+                <span class="text-accent mt-1">•</span>
+                Begeleiding bij herstel en geleidelijke werkhervatting
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-accent mt-1">•</span>
+                Opstellen van een Plan van Aanpak
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-accent mt-1">•</span>
+                Mediatie bij conflicten op de werkvloer
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-accent mt-1">•</span>
+                Aanpassing van takenpakket of werktijden
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-accent mt-1">•</span>
+                Begeleiding naar duurzame inzetbaarheid
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Spoor 2 -->
+        <div class="bg-white rounded-2xl overflow-hidden shadow-md">
+          <div class="bg-accent h-2"></div>
+          <div class="p-8">
+            <div class="w-14 h-14 bg-accent rounded-full flex items-center justify-center mb-5">
+              <span class="font-heading font-bold text-xl text-white">2</span>
+            </div>
+            <h3 class="font-heading font-bold text-2xl text-primary mb-4">Spoor 2</h3>
+            <p class="text-muted leading-relaxed mb-4">
+              Wanneer terugkeer bij de eigen werkgever niet mogelijk is, start spoor 2: begeleiding naar werk bij een andere werkgever. Dit traject start uiterlijk in het tweede ziektejaar.
+            </p>
+            <h4 class="font-semibold text-primary mb-3">Wat houdt spoor 2 in?</h4>
+            <ul class="space-y-2 text-muted text-sm">
+              <li class="flex items-start gap-2">
+                <span class="text-accent mt-1">•</span>
+                Loopbaanoriëntatie en capaciteitenonderzoek
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-accent mt-1">•</span>
+                Arbeidsmarktanalyse en sollicitatiebegeleiding
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-accent mt-1">•</span>
+                CV-schrijven en LinkedIn-profiel optimaliseren
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-accent mt-1">•</span>
+                Netwerken en jobhunting
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-accent mt-1">•</span>
+                Begeleiding tot plaatsing in nieuwe functie
+              </li>
+            </ul>
+            <div class="mt-5">
+              <a href="/re-integratie/2e-spoor-begeleiding" class="text-accent font-semibold hover:text-primary transition-colors inline-flex items-center gap-1 text-sm">
+                Meer over 2e Spoor Begeleiding →
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ons aanbod -->
+  <section class="bg-background py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <SectionTitle
+        title="Ons aanbod"
+        subtitle="Ik bied re-integratiediensten aan voor zowel werknemers als werkgevers."
+      />
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {[
+          {
+            title: 'Voor werknemers',
+            items: [
+              'Persoonlijke begeleiding en coaching',
+              'Ondersteuning bij UWV-procedures',
+              'Loopbaanoriëntatie en -planning',
+              'Sollicitatiebegeleiding',
+              'Psychosociale ondersteuning',
+            ],
+          },
+          {
+            title: 'Voor werkgevers',
+            items: [
+              'Poortwachterbegeleiding',
+              'Opstellen re-integratieplan',
+              'Ontzorging bij het re-integratieproces',
+              'Advies over wettelijke verplichtingen',
+              'Preventie van langdurig verzuim',
+            ],
+          },
+          {
+            title: 'Samen met UWV',
+            items: [
+              'Begeleiding bij WIA-aanvraag',
+              'Contactpersoon richting verzekeringsarts',
+              'Procesbewaking Wet verbetering poortwachter',
+              'Deskundigenoordeel aanvragen',
+              'Dossiervorming en rapportage',
+            ],
+          },
+        ].map((col) => (
+          <div class="bg-surface rounded-xl p-6 shadow-md">
+            <h3 class="font-heading font-semibold text-xl text-primary mb-4">{col.title}</h3>
+            <ul class="space-y-2">
+              {col.items.map((item) => (
+                <li class="flex items-start gap-2 text-muted text-sm">
+                  <svg class="w-4 h-4 text-accent flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <CTASection
+    title="Hulp nodig bij re-integratie?"
+    subtitle="Neem contact op voor een vrijblijvend gesprek over uw re-integratiesituatie. Ik denk graag met u mee."
+    href="/contact"
+    btnText="Neem contact op"
+  />
+
+</BaseLayout>

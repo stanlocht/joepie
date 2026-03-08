@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #1E4D72;
+  --color-accent: #2A9D8F;
+  --color-background: #F8F7F4;
+  --color-surface: #FFFFFF;
+  --color-section-alt: #EEF5F3;
+  --color-text: #1A1A2E;
+  --color-muted: #5B7084;
+  --color-gold: #E9A84C;
+  --font-heading: 'Poppins', sans-serif;
+  --font-body: 'Open Sans', sans-serif;
+}
+
+body {
+  background-color: #F8F7F4;
+  color: #1A1A2E;
+  font-family: 'Open Sans', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* ── Scroll-reveal animations ── */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal[data-delay="1"] { transition-delay: 100ms; }
+.reveal[data-delay="2"] { transition-delay: 200ms; }
+.reveal[data-delay="3"] { transition-delay: 300ms; }
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* ── FAQ accordion smooth height ── */
+details > div {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease;
+}
+
+details[open] > div {
+  max-height: 300px;
+}

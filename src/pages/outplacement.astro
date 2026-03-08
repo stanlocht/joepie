@@ -1,0 +1,170 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SectionTitle from '../components/SectionTitle.astro';
+import CTASection from '../components/CTASection.astro';
+---
+
+<BaseLayout
+  title="Outplacement"
+  description="Outplacement begeleiding door Joep Lochtenberg in Hilversum. Professionele ondersteuning bij ontslag en overgang naar een nieuwe werkgever."
+>
+
+  <!-- Hero -->
+  <section class="bg-primary text-white py-20">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <span class="text-accent font-semibold uppercase text-sm tracking-wider mb-4 block">Dienst</span>
+      <h1 class="font-heading font-bold text-4xl md:text-5xl mb-6">Outplacement</h1>
+      <p class="text-white/85 text-xl leading-relaxed max-w-2xl mx-auto">
+        Professionele begeleiding van werknemers die de organisatie verlaten naar een nieuwe en passende werkomgeving.
+      </p>
+    </div>
+  </section>
+
+  <!-- Wat is outplacement? -->
+  <section class="bg-background py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+        <div>
+          <h2 class="font-heading font-bold text-3xl text-primary mb-5">Wat is outplacement?</h2>
+          <p class="text-muted leading-relaxed mb-4">
+            Outplacement is een professionele begeleidingsdienst voor werknemers die hun baan verliezen door reorganisatie, faillissement, ontslag of een andere reden. Het doel is om de medewerker zo snel mogelijk en op een waardige manier te begeleiden naar een nieuwe passende functie.
+          </p>
+          <p class="text-muted leading-relaxed mb-4">
+            Als werkgever toont u met outplacement uw verantwoordelijkheid voor uw medewerkers, ook na uitdiensttreding. Dit is niet alleen sociaal verantwoord, maar ook goed voor uw reputatie als werkgever.
+          </p>
+          <p class="text-muted leading-relaxed mb-4">
+            Voor de werknemer biedt outplacement professionele ondersteuning in een kwetsbare periode. Met de juiste begeleiding vindt u sneller een nieuwe baan die aansluit bij uw talenten en ambities.
+          </p>
+          <p class="text-muted leading-relaxed">
+            Ik bied outplacementtrajecten aan voor individuele medewerkers en voor grotere groepen bij reorganisaties. De begeleiding is persoonlijk, intensief en volledig gericht op plaatsing.
+          </p>
+        </div>
+        <div class="space-y-4">
+          <div class="bg-section-alt rounded-2xl p-6">
+            <h3 class="font-heading font-semibold text-lg text-primary mb-3">Voor werknemers</h3>
+            <p class="text-muted text-sm leading-relaxed">
+              U krijgt persoonlijke coaching, sollicitatiebegeleiding en toegang tot een uitgebreid netwerk. Wij begeleiden u van analyse tot plaatsing in een nieuwe functie.
+            </p>
+          </div>
+          <div class="bg-section-alt rounded-2xl p-6">
+            <h3 class="font-heading font-semibold text-lg text-primary mb-3">Voor werkgevers</h3>
+            <p class="text-muted text-sm leading-relaxed">
+              Een goed outplacementtraject verkleint de kans op juridische conflicten, versterkt uw employer brand en toont respect voor vertrekkende medewerkers.
+            </p>
+          </div>
+          <div class="bg-section-alt rounded-2xl p-6">
+            <h3 class="font-heading font-semibold text-lg text-primary mb-3">Groepstrajecten</h3>
+            <p class="text-muted text-sm leading-relaxed">
+              Bij reorganisaties begeleid ik groepen medewerkers simultaan. Efficiënt, persoonlijk en met aandacht voor ieders individuele situatie.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Het outplacementtraject -->
+  <section class="bg-section-alt py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <SectionTitle
+        title="Het outplacementtraject"
+        subtitle="Van het verwerken van het ontslag tot de plaatsing in een nieuwe functie – ik begeleid u elke stap."
+      />
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        {[
+          {
+            step: '1',
+            title: 'Verwerking & oriëntatie',
+            desc: 'Ruimte voor het verwerken van het ontslag. We bespreken uw gevoelens, situatie en mogelijkheden. Geen haast, wel richting.',
+          },
+          {
+            step: '2',
+            title: 'Zelfinzicht & profiel',
+            desc: 'We brengen uw talenten, drijfveren en arbeidsmarktwaarde in kaart. U krijgt een scherp beeld van uw professionele profiel.',
+          },
+          {
+            step: '3',
+            title: 'Arbeidsmarkt & strategie',
+            desc: 'We analyseren de arbeidsmarkt en ontwikkelen een persoonlijke zoekstrategie. CV, LinkedIn en sollicitatiematerialen worden geoptimaliseerd.',
+          },
+          {
+            step: '4',
+            title: 'Plaatsing & nazorg',
+            desc: 'Intensieve jobhunting, sollicitatiecoaching en onderhandeling. Begeleiding totdat u geplaatst bent in een nieuwe functie.',
+          },
+        ].map((item) => (
+          <div class="bg-white rounded-xl p-6 shadow-md text-center">
+            <div class="w-14 h-14 bg-primary text-white rounded-full flex items-center justify-center mx-auto mb-4 font-heading font-bold text-xl">
+              {item.step}
+            </div>
+            <h3 class="font-heading font-semibold text-lg text-primary mb-3">{item.title}</h3>
+            <p class="text-muted text-sm leading-relaxed">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Wat krijgt u -->
+  <section class="bg-background py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <SectionTitle
+        title="Wat krijgt u van mij?"
+        subtitle="Een volledig, persoonlijk outplacementtraject met alles wat u nodig heeft om succesvol te zijn op de arbeidsmarkt."
+      />
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {[
+          {
+            title: 'Persoonlijke coaching',
+            items: [
+              'Individuele coachingsgesprekken',
+              'Loopbaanoriëntatie met gevalideerde instrumenten',
+              'Carrièrestrategie op maat',
+              'Zelfvertrouwen versterken',
+            ],
+          },
+          {
+            title: 'Praktische ondersteuning',
+            items: [
+              'CV en motivatiebrief schrijven',
+              'LinkedIn-profiel optimaliseren',
+              'Sollicitatiegesprek training',
+              'Arbeidscontract beoordeling',
+            ],
+          },
+          {
+            title: 'Netwerk & markt',
+            items: [
+              'Toegang tot verborgen arbeidsmarkt',
+              'Netwerken en personal branding',
+              'Direct contact met werkgevers',
+              'Begeleiding tot plaatsing',
+            ],
+          },
+        ].map((col) => (
+          <div class="border-t-4 border-accent bg-white rounded-xl p-6 shadow-md">
+            <h3 class="font-heading font-semibold text-xl text-primary mb-4">{col.title}</h3>
+            <ul class="space-y-2">
+              {col.items.map((item) => (
+                <li class="flex items-start gap-2 text-muted text-sm">
+                  <svg class="w-4 h-4 text-accent flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <CTASection
+    title="Vragen over outplacement?"
+    subtitle="Neem contact op voor een vrijblijvend gesprek. Ik help u of uw medewerkers graag op weg naar een nieuwe toekomst."
+    href="/contact"
+    btnText="Plan een kennismaking"
+  />
+
+</BaseLayout>

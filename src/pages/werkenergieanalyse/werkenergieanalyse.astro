@@ -1,0 +1,173 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import SectionTitle from '../../components/SectionTitle.astro';
+import CTASection from '../../components/CTASection.astro';
+---
+
+<BaseLayout
+  title="De Werkenergieanalyse"
+  description="Alles over de Werkenergieanalyse van Joep Lochtenberg. Hoe het werkt, wat het meet en wat u kunt verwachten."
+>
+
+  <!-- Hero -->
+  <section class="bg-primary text-white py-20">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <span class="text-accent font-semibold uppercase text-sm tracking-wider mb-4 block">Werkenergieanalyse</span>
+      <h1 class="font-heading font-bold text-4xl md:text-5xl mb-6">De Werkenergieanalyse</h1>
+      <p class="text-white/85 text-xl leading-relaxed max-w-2xl mx-auto">
+        Een diepgaand instrument dat uw werkenergie in kaart brengt en concrete handvatten geeft voor meer vitaliteit en werkplezier.
+      </p>
+    </div>
+  </section>
+
+  <!-- Hoe werkt het? -->
+  <section class="bg-background py-20">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="font-heading font-bold text-3xl text-primary mb-5">Hoe werkt de Werkenergieanalyse?</h2>
+      <p class="text-muted leading-relaxed mb-4">
+        De Werkenergieanalyse bestaat uit een gevalideerde vragenlijst die u digitaal invult. Het invullen duurt ongeveer 20 tot 30 minuten. Vervolgens verwerk ik de resultaten en maak ik een persoonlijk rapport dat we samen bespreken in een coachingsgesprek.
+      </p>
+      <p class="text-muted leading-relaxed mb-8">
+        Het rapport geeft een helder overzicht van uw werkstressoren, energiebronnen en de balans daartussen. We bespreken de resultaten en stellen samen een concreet actieplan op.
+      </p>
+    </div>
+  </section>
+
+  <!-- Wat wordt gemeten? -->
+  <section class="bg-section-alt py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <SectionTitle
+        title="Wat wordt er gemeten?"
+        subtitle="De analyse meet een breed scala aan factoren die van invloed zijn op uw werkenergie."
+      />
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="bg-white rounded-xl p-6 shadow-md">
+          <h3 class="font-heading font-semibold text-xl text-primary mb-4 flex items-center gap-2">
+            <span class="w-8 h-8 bg-gold/20 rounded-full flex items-center justify-center text-gold text-sm font-bold">!</span>
+            Werkstressoren (taakeisen)
+          </h3>
+          <ul class="space-y-2 text-muted text-sm">
+            {[
+              'Werkdruk en tijdsdruk',
+              'Emotionele belasting (bijv. omgaan met moeilijke situaties)',
+              'Mentale belasting (cognitieve inspanning)',
+              'Rolonduidelijkheid en rolconflict',
+              'Ongewenst gedrag op de werkvloer',
+              'Werk-privébalans',
+            ].map((item) => (
+              <li class="flex items-start gap-2">
+                <span class="text-gold mt-1">▲</span> {item}
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div class="bg-white rounded-xl p-6 shadow-md">
+          <h3 class="font-heading font-semibold text-xl text-primary mb-4 flex items-center gap-2">
+            <span class="w-8 h-8 bg-accent/20 rounded-full flex items-center justify-center text-accent text-sm font-bold">+</span>
+            Energiebronnen (job resources)
+          </h3>
+          <ul class="space-y-2 text-muted text-sm">
+            {[
+              'Autonomie en zelfstandigheid',
+              'Sociale steun van collega\'s en leidinggevende',
+              'Feedback en waardering',
+              'Leer- en groeimogelijkheden',
+              'Betekenisvol werk',
+              'Verbondenheid met de organisatie',
+            ].map((item) => (
+              <li class="flex items-start gap-2">
+                <span class="text-accent mt-1">●</span> {item}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+      <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+        {[
+          { title: 'Bevlogenheid', desc: 'In welke mate u enthousiast, energiek en volledig opgaat in uw werk.' },
+          { title: 'Vitaliteit', desc: 'Uw fysieke en mentale veerkracht en hoe u omgaat met werkbelasting.' },
+          { title: 'Persoonlijke hulpbronnen', desc: 'Uw eigen sterktes, zoals zelfvertrouwen, optimisme en proactiviteit.' },
+        ].map((item) => (
+          <div class="bg-white rounded-xl p-5 shadow-sm text-center">
+            <h4 class="font-heading font-semibold text-primary mb-2">{item.title}</h4>
+            <p class="text-muted text-sm">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Het rapport -->
+  <section class="bg-background py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <SectionTitle
+        title="Uw persoonlijk rapport"
+        subtitle="Na de analyse ontvangt u een uitgebreid persoonlijk rapport."
+      />
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {[
+          {
+            title: 'Overzicht per dimensie',
+            desc: 'U ziet voor elke gemeten dimensie hoe u scoort ten opzichte van een normgroep. Dit geeft direct inzicht in uw sterktes en aandachtspunten.',
+          },
+          {
+            title: 'Energiebalans visualisatie',
+            desc: 'Een grafische weergave van uw werkstressoren versus energiebronnen. In één oogopslag ziet u hoe uw werkenergie verdeeld is.',
+          },
+          {
+            title: 'Persoonlijke analyse',
+            desc: 'Een schriftelijke analyse van uw resultaten, geschreven in begrijpelijke taal. Wat betekenen de scores voor uw dagelijkse werksituatie?',
+          },
+          {
+            title: 'Concrete aanbevelingen',
+            desc: 'Praktische adviezen en actiepunten die direct toepasbaar zijn. Geen vage adviezen, maar concrete stappen voor meer werkplezier en vitaliteit.',
+          },
+        ].map((item) => (
+          <div class="flex items-start gap-4 bg-surface rounded-xl p-6 shadow-sm">
+            <div class="w-10 h-10 bg-accent rounded-full flex items-center justify-center flex-shrink-0">
+              <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-heading font-semibold text-lg text-primary mb-2">{item.title}</h3>
+              <p class="text-muted text-sm leading-relaxed">{item.desc}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Praktische info -->
+  <section class="bg-section-alt py-16">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-white rounded-2xl p-8 shadow-md">
+        <h2 class="font-heading font-bold text-2xl text-primary mb-6">Praktische informatie</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {[
+            { label: 'Invultijd vragenlijst', value: 'Ca. 20-30 minuten' },
+            { label: 'Rapportage', value: 'Digitaal, binnen 5 werkdagen' },
+            { label: 'Gespreksduur', value: '60-90 minuten' },
+            { label: 'Locatie', value: 'Hilversum of online' },
+            { label: 'Inclusief', value: 'Vragenlijst, rapport en coachingsgesprek' },
+            { label: 'Mogelijk combineren met', value: 'Loopbaancoaching of teamtraject' },
+          ].map((row) => (
+            <div class="flex justify-between border-b border-gray-100 pb-3">
+              <span class="text-muted text-sm">{row.label}</span>
+              <span class="text-primary font-semibold text-sm text-right">{row.value}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <CTASection
+    title="Start vandaag nog met uw Werkenergieanalyse"
+    subtitle="Neem contact op voor meer informatie of plan direct een kennismakingsgesprek."
+    href="/contact"
+    btnText="Neem contact op"
+  />
+
+</BaseLayout>

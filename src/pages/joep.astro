@@ -1,0 +1,192 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CTASection from '../components/CTASection.astro';
+---
+
+<BaseLayout
+  title="Over Joep"
+  description="Over Joep Lochtenberg, gecertificeerd loopbaancoach in Hilversum. Leer meer over zijn achtergrond, ervaring en werkwijze."
+>
+
+  <!-- Hero -->
+  <section class="bg-primary text-white py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <span class="text-accent font-semibold uppercase text-sm tracking-wider mb-4 block">Over mij</span>
+          <h1 class="font-heading font-bold text-4xl md:text-5xl mb-6">Joep Lochtenberg</h1>
+          <p class="text-gold font-semibold text-xl mb-4">Loopbaancoach in Hilversum</p>
+          <p class="text-white/85 text-lg leading-relaxed">
+            Als gecertificeerd loopbaancoach en NOLOC-lid begeleid ik mensen bij het maken van bewuste keuzes in hun loopbaan. Met meer dan 13 jaar ervaring heb ik honderden professionals geholpen om hun loopbaan in eigen handen te nemen.
+          </p>
+        </div>
+        <div class="flex justify-center lg:justify-end">
+          <img
+            src="/images/joep.jpg"
+            alt="Joep Lochtenberg"
+            class="rounded-2xl shadow-2xl w-full max-w-sm"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mijn verhaal -->
+  <section class="bg-background py-20">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="font-heading font-bold text-3xl text-primary mb-6">Mijn verhaal</h2>
+      <div class="space-y-5 text-muted leading-relaxed">
+        <p>
+          Mijn passie voor loopbaancoaching is niet zomaar ontstaan. In het begin van mijn loopbaan werkte ik zelf in de corporate wereld en ervoer ik van binnenuit hoe het voelt om op een kruispunt te staan. De vragen "Past dit bij mij?", "Is dit wat ik wil?" en "Wat zijn mijn echte talenten?" kwamen ook bij mij op.
+        </p>
+        <p>
+          Die persoonlijke ervaring maakte me bewust van hoe waardevol professionele begeleiding kan zijn. Ik besloot mijn carrière te richten op het helpen van anderen in precies die situaties. Ik volgde een gedegen opleiding tot loopbaancoach, haalde mijn RLP-registratie (Registerloopbaanprofessional) en sloot me aan bij NOLOC, de beroepsvereniging voor loopbaanprofessionals in Nederland.
+        </p>
+        <p>
+          Sindsdien heb ik meer dan 500 mensen begeleid bij loopbaanvragen, re-integratie, outplacement en werkenergieanalyses. Ik werk vanuit Hilversum en ben ook actief in de regio's Amsterdam, Utrecht en Almere.
+        </p>
+        <p>
+          Mijn aanpak is persoonlijk, nuchter en resultaatgericht. Ik geloof in de kracht van mensen om zelf regie te nemen over hun loopbaan. Mijn rol is die van spiegel, sparringpartner en gids – niet die van iemand die zegt wat u moet doen.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Foto 2 + werkwijze -->
+  <section class="bg-section-alt py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <img
+            src="/images/joep-2.jpg"
+            alt="Joep Lochtenberg in gesprek"
+            class="rounded-2xl shadow-xl w-full max-w-sm mx-auto lg:mx-0"
+          />
+        </div>
+        <div>
+          <h2 class="font-heading font-bold text-3xl text-primary mb-5">Mijn werkwijze</h2>
+          <p class="text-muted leading-relaxed mb-4">
+            Elk coachingstraject begint met een grondig kennismakingsgesprek. Ik neem de tijd om u te leren kennen: uw situatie, uw wensen, uw talenten en uw belemmeringen. Pas dan stel ik een traject op maat voor.
+          </p>
+          <p class="text-muted leading-relaxed mb-4">
+            Ik werk met bewezen methodieken zoals de RLP-methode, de Werkenergieanalyse (gebaseerd op het JD-R model) en diverse loopbaaninstrumenten. Maar instrumenten zijn slechts hulpmiddelen: de echte coaching vindt plaats in het gesprek.
+          </p>
+          <p class="text-muted leading-relaxed mb-6">
+            Ik ben direct, eerlijk en houd u een spiegel voor. Soms zijn dat confronterende inzichten – maar altijd met respect en in een veilige omgeving. Want groei begint bij zelfkennis.
+          </p>
+          <ul class="space-y-3">
+            {[
+              'Persoonlijk en mensgericht',
+              'Resultaatgericht en praktisch',
+              'Gebaseerd op bewezen methodieken',
+              'Vertrouwelijk en veilig',
+              'NOLOC beroepscode van toepassing',
+            ].map((item) => (
+              <li class="flex items-center gap-3">
+                <svg class="w-5 h-5 text-accent flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span class="text-muted">{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certificeringen -->
+  <section class="bg-background py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="font-heading font-bold text-3xl text-primary mb-4">Opleidingen & Certificeringen</h2>
+        <p class="text-muted text-lg max-w-2xl mx-auto">
+          Kwaliteit en professionaliteit staan centraal in mijn praktijk. Ik houd mijn kennis actueel via permanente educatie.
+        </p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+        <!-- NOLOC -->
+        <div class="bg-surface rounded-xl p-8 shadow-md text-center">
+          <div class="w-20 h-20 bg-section-alt rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-10 h-10 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+            </svg>
+          </div>
+          <h3 class="font-heading font-semibold text-xl text-primary mb-2">NOLOC</h3>
+          <p class="text-accent font-semibold text-sm mb-3">Gecertificeerd lid</p>
+          <p class="text-muted text-sm leading-relaxed">
+            NOLOC is de beroepsvereniging voor loopbaanprofessionals in Nederland. Lidmaatschap garandeert naleving van de beroepscode en permanente educatie.
+          </p>
+        </div>
+
+        <!-- RLP Badge -->
+        <div class="bg-surface rounded-xl p-8 shadow-md text-center">
+          <div class="flex justify-center mb-4">
+            <img src="/images/rlp-badge.png" alt="RLP badge" class="h-20 w-auto" />
+          </div>
+          <h3 class="font-heading font-semibold text-xl text-primary mb-2">RLP</h3>
+          <p class="text-accent font-semibold text-sm mb-3">Registerloopbaanprofessional</p>
+          <p class="text-muted text-sm leading-relaxed">
+            Het RLP-keurmerk is het kwaliteitsmerk voor loopbaanprofessionals in Nederland. Het staat voor vakbekwaamheid, ethisch handelen en permanente ontwikkeling.
+          </p>
+        </div>
+
+        <!-- SPHBO -->
+        <div class="bg-surface rounded-xl p-8 shadow-md text-center">
+          <div class="flex justify-center mb-4">
+            <img src="/images/sphbo-logo.jpg" alt="SPHBO logo" class="h-20 w-auto" />
+          </div>
+          <h3 class="font-heading font-semibold text-xl text-primary mb-2">SPHBO</h3>
+          <p class="text-accent font-semibold text-sm mb-3">Gecertificeerd</p>
+          <p class="text-muted text-sm leading-relaxed">
+            SPHBO-certificering toont aan dat ik voldoe aan de kwaliteitseisen voor re-integratiedienstverlening en outplacement in Nederland.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Feiten & Cijfers -->
+  <section class="bg-primary text-white py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+        {[
+          { stat: '500+', label: 'Begeleidde cliënten' },
+          { stat: '13+', label: 'Jaar ervaring' },
+          { stat: '95%', label: 'Cliënttevreden-heid' },
+          { stat: '3', label: 'Certificeringen' },
+        ].map((item) => (
+          <div>
+            <div class="text-4xl font-heading font-bold text-gold mb-2">{item.stat}</div>
+            <div class="text-white/80 text-sm">{item.label}</div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Persoonlijk -->
+  <section class="bg-background py-20">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="font-heading font-bold text-3xl text-primary mb-5">Even persoonlijk</h2>
+      <p class="text-muted leading-relaxed mb-4">
+        Naast mijn werk als loopbaancoach houd ik van wandelen in de natuur rondom Hilversum – het Gooi biedt daar prachtige mogelijkheden voor. Ik geloof dat ruimte en rust essentieel zijn voor reflectie en persoonlijke groei, en ik geef dat advies ook graag mee aan mijn cliënten.
+      </p>
+      <p class="text-muted leading-relaxed mb-4">
+        Ik ben vader van twee kinderen en weet uit eigen ervaring hoe de balans tussen werk en privé soms onder druk kan staan. Die persoonlijke ervaring maakt me een betere coach: ik begrijp de dilemma's die mensen ervaren op een diep niveau.
+      </p>
+      <p class="text-muted leading-relaxed">
+        Ik blijf me permanent bijscholen en volg de nieuwste ontwikkelingen in positieve psychologie, arbeidsmarkt en loopbaanwetenschappen. Dat garandeert u als cliënt de meest actuele en effectieve begeleiding.
+      </p>
+    </div>
+  </section>
+
+  <CTASection
+    title="Kennis maken met Joep?"
+    subtitle="Plan een vrijblijvend kennismakingsgesprek en ervaar zelf hoe loopbaancoaching uw loopbaan kan transformeren."
+    href="/contact"
+    btnText="Plan een gratis kennismaking"
+  />
+
+</BaseLayout>

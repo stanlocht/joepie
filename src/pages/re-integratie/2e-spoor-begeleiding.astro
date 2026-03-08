@@ -1,0 +1,163 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import SectionTitle from '../../components/SectionTitle.astro';
+import CTASection from '../../components/CTASection.astro';
+---
+
+<BaseLayout
+  title="2e Spoor Begeleiding"
+  description="2e Spoor re-integratiebegeleiding door Joep Lochtenberg in Hilversum. Professionele begeleiding naar werk bij een andere werkgever."
+>
+
+  <!-- Hero -->
+  <section class="bg-primary text-white py-20">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <span class="text-accent font-semibold uppercase text-sm tracking-wider mb-4 block">Re-integratie</span>
+      <h1 class="font-heading font-bold text-4xl md:text-5xl mb-6">2e Spoor Begeleiding</h1>
+      <p class="text-white/85 text-xl leading-relaxed max-w-2xl mx-auto">
+        Professionele begeleiding naar een nieuwe baan bij een andere werkgever als terugkeer bij de eigen werkgever niet mogelijk is.
+      </p>
+    </div>
+  </section>
+
+  <!-- Wat is 2e spoor? -->
+  <section class="bg-background py-20">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="font-heading font-bold text-3xl text-primary mb-5">Wat is 2e spoor begeleiding?</h2>
+      <p class="text-muted leading-relaxed mb-4">
+        Wanneer een zieke werknemer niet kan terugkeren bij de eigen werkgever – omdat de functie niet meer passend is, de werkrelatie is verstoord of de organisatie geen geschikte werkplek kan bieden – dan is het tweede spoor aan de orde.
+      </p>
+      <p class="text-muted leading-relaxed mb-4">
+        De Wet verbetering poortwachter verplicht werkgevers om uiterlijk in het tweede ziektejaar een 2e spoor traject op te starten als terugkeer bij de eigen werkgever niet realistisch is. Het doel: de werknemer begeleiden naar passend werk bij een andere werkgever.
+      </p>
+      <p class="text-muted leading-relaxed mb-8">
+        Als gecertificeerd re-integratiecoach begeleid ik zowel werknemers als werkgevers door dit traject. Mijn aanpak is mensgericht, praktisch en resultaatgericht.
+      </p>
+
+      <div class="bg-section-alt rounded-2xl p-6 mb-8">
+        <h3 class="font-heading font-semibold text-lg text-primary mb-3">Wanneer start het 2e spoor?</h3>
+        <p class="text-muted text-sm leading-relaxed">
+          Het 2e spoor kan al in het eerste ziektejaar worden opgestart als duidelijk is dat terugkeer bij de eigen werkgever niet mogelijk is. Uiterlijk bij de eerstejaarsevaluatie (52 weken) moet beoordeeld worden of het 2e spoor opgestart moet worden. Dit is een wettelijke verplichting voor de werkgever.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Het traject -->
+  <section class="bg-section-alt py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <SectionTitle
+        title="Het 2e spoor traject"
+        subtitle="Een gestructureerde begeleiding van analyse tot plaatsing bij een nieuwe werkgever."
+      />
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {[
+          {
+            step: '01',
+            title: 'Intake en analyse',
+            desc: 'We brengen uw situatie, mogelijkheden en beperkingen in kaart. Op basis hiervan stellen we een persoonlijk re-integratieplan op.',
+          },
+          {
+            step: '02',
+            title: 'Loopbaanoriëntatie',
+            desc: 'We onderzoeken uw talenten, vaardigheden en arbeidsmarktkansen. Samen bepalen we een realistische loopbaanrichting.',
+          },
+          {
+            step: '03',
+            title: 'Arbeidsmarktvoorbereiding',
+            desc: 'We optimaliseren uw CV, LinkedIn-profiel en sollicitatiebrieven. U traint uw sollicitatievaardigheden en presentatie.',
+          },
+          {
+            step: '04',
+            title: 'Actieve jobhunting',
+            desc: 'Via vacaturescan, netwerken en directe benadering van werkgevers zoeken we actief naar passende vacatures.',
+          },
+          {
+            step: '05',
+            title: 'Sollicitatietraining',
+            desc: 'We oefenen sollicitatiegesprekken, bespreken strategie en werken aan uw zelfvertrouwen en presentatie.',
+          },
+          {
+            step: '06',
+            title: 'Begeleiding tot plaatsing',
+            desc: 'U ontvangt begeleiding totdat u geplaatst bent in een nieuwe functie. Inclusief nazorg en rapportage richting werkgever en UWV.',
+          },
+        ].map((item) => (
+          <div class="bg-white rounded-xl p-6 shadow-md">
+            <div class="w-10 h-10 bg-accent rounded-full flex items-center justify-center mb-4">
+              <span class="font-heading font-bold text-sm text-white">{item.step}</span>
+            </div>
+            <h3 class="font-heading font-semibold text-lg text-primary mb-3">{item.title}</h3>
+            <p class="text-muted text-sm leading-relaxed">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Voor werkgever -->
+  <section class="bg-background py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div>
+          <h2 class="font-heading font-bold text-3xl text-primary mb-5">Voor werkgevers</h2>
+          <p class="text-muted leading-relaxed mb-4">
+            Als werkgever heeft u wettelijke verplichtingen rondom re-integratie. Het niet naleven van deze verplichtingen kan leiden tot een loonsanctie van het UWV: u moet dan het loon één jaar extra doorbetalen.
+          </p>
+          <p class="text-muted leading-relaxed mb-4">
+            Ik ontzorg u in dit proces. Als uw re-integratiecoach zorg ik voor een correct en gedocumenteerd 2e spoor traject, communiceer ik met de werknemer en ben ik uw aanspreekpunt richting het UWV.
+          </p>
+          <ul class="space-y-3 mt-6">
+            {[
+              'Volledig verzorgd re-integratiedossier',
+              'Rapportages voor eerstejaarsevaluatie en WIA-aanvraag',
+              'Aanspreekpunt voor werknemer én UWV',
+              'Transparante voortgangsrapportage',
+              'Advies bij complexe situaties',
+            ].map((item) => (
+              <li class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-accent flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span class="text-muted">{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div>
+          <h2 class="font-heading font-bold text-3xl text-primary mb-5">Voor werknemers</h2>
+          <p class="text-muted leading-relaxed mb-4">
+            Een 2e spoor traject kan overweldigend voelen, zeker als u al een moeilijke periode achter de rug heeft. Ik begeleid u persoonlijk en op uw eigen tempo.
+          </p>
+          <p class="text-muted leading-relaxed mb-4">
+            U heeft recht op begeleiding die aansluit bij uw situatie en mogelijkheden. Samen werken we aan een nieuwe stap in uw loopbaan die écht bij u past.
+          </p>
+          <ul class="space-y-3 mt-6">
+            {[
+              'Persoonlijke begeleiding op uw tempo',
+              'Eerlijke communicatie over uw rechten en plichten',
+              'Begeleiding bij eventuele medische beperkingen',
+              'Versterking van uw zelfvertrouwen',
+              'Focus op passend werk voor de lange termijn',
+            ].map((item) => (
+              <li class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-accent flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span class="text-muted">{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <CTASection
+    title="Vragen over 2e spoor begeleiding?"
+    subtitle="Neem contact op voor een vrijblijvend gesprek. Ik leg u graag uit wat ik voor u of uw werknemer kan betekenen."
+    href="/contact"
+    btnText="Neem contact op"
+  />
+
+</BaseLayout>

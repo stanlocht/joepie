@@ -1,0 +1,155 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import SectionTitle from '../../components/SectionTitle.astro';
+import CTASection from '../../components/CTASection.astro';
+---
+
+<BaseLayout
+  title="Werkstressoren & Energiebronnen"
+  description="Meer over werkstressoren en energiebronnen in uw werk. Joep Lochtenberg legt uit hoe deze factoren uw werkenergie beïnvloeden."
+>
+
+  <!-- Hero -->
+  <section class="bg-primary text-white py-20">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <span class="text-accent font-semibold uppercase text-sm tracking-wider mb-4 block">Werkenergieanalyse</span>
+      <h1 class="font-heading font-bold text-4xl md:text-5xl mb-6">Werkstressoren &amp; Energiebronnen</h1>
+      <p class="text-white/85 text-xl leading-relaxed max-w-2xl mx-auto">
+        Begrijp welke factoren in uw werk energie geven en welke energie kosten – de sleutel tot duurzaam werkgeluk.
+      </p>
+    </div>
+  </section>
+
+  <!-- Intro -->
+  <section class="bg-background py-20">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="font-heading font-bold text-3xl text-primary mb-5">De energiebalans op het werk</h2>
+      <p class="text-muted leading-relaxed mb-4">
+        Elk mens heeft in zijn of haar werk te maken met twee soorten factoren: factoren die energie kosten (werkstressoren) en factoren die energie geven (energiebronnen). De verhouding tussen deze twee bepaalt in grote mate hoe u zich voelt op het werk en hoe productief en bevlogen u bent.
+      </p>
+      <p class="text-muted leading-relaxed mb-4">
+        Wanneer de werkstressoren structureel zwaarder wegen dan de energiebronnen, ontstaat er een onevenwichtige situatie die kan leiden tot vermoeidheid, verminderde motivatie en uiteindelijk burn-out of uitval. Omgekeerd: wanneer energiebronnen overvloedig aanwezig zijn, kunt u zelfs hoge taakeisen aan zonder dat dit ten koste gaat van uw welzijn.
+      </p>
+      <p class="text-muted leading-relaxed">
+        Inzicht in uw persoonlijke werkstressoren en energiebronnen is daarom essentieel voor een gezonde en duurzame loopbaan.
+      </p>
+    </div>
+  </section>
+
+  <!-- Werkstressoren -->
+  <section class="bg-section-alt py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <SectionTitle
+        title="Werkstressoren"
+        subtitle="Werkstressoren zijn aspecten van het werk die inspanning vereisen en energie kosten."
+      />
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {[
+          {
+            title: 'Werkdruk',
+            desc: 'Te veel werk in te weinig tijd. Een structurele hoge werkdruk is een van de meest voorkomende werkstressoren in Nederland.',
+          },
+          {
+            title: 'Emotionele belasting',
+            desc: 'Werk waarbij u veel emoties van anderen opvangt of waarbij u uw eigen emoties moet beheersen (bijv. in de zorg, het onderwijs of de hulpverlening).',
+          },
+          {
+            title: 'Rolonduidelijkheid',
+            desc: 'Onduidelijkheid over uw taken, bevoegdheden en verantwoordelijkheden. Dit leidt tot onzekerheid en verspilling van energie.',
+          },
+          {
+            title: 'Rolconflict',
+            desc: 'Tegenstrijdige eisen vanuit verschillende kanten: leidinggevende, collega\'s, klanten of privé. U kunt niet aan alle verwachtingen voldoen.',
+          },
+          {
+            title: 'Werk-privéconflict',
+            desc: 'Wanneer werk en privéleven elkaar negatief beïnvloeden. Overwerk, bereikbaarheid buiten kantoortijd en thuiswerken kunnen dit versterken.',
+          },
+          {
+            title: 'Negatieve werkomgeving',
+            desc: 'Ongewenst gedrag zoals pesten, discriminatie, conflicten of een ongezonde teamdynamiek putten energie uit.',
+          },
+        ].map((card) => (
+          <div class="bg-white rounded-xl p-6 shadow-md border-t-4 border-gold">
+            <h3 class="font-heading font-semibold text-lg text-primary mb-3">{card.title}</h3>
+            <p class="text-muted text-sm leading-relaxed">{card.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Energiebronnen -->
+  <section class="bg-background py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <SectionTitle
+        title="Energiebronnen"
+        subtitle="Energiebronnen zijn aspecten van het werk die motiveren, ondersteunen en energie geven."
+      />
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {[
+          {
+            title: 'Autonomie',
+            desc: 'De mate waarin u zelf kunt bepalen hoe, wanneer en waar u uw werk doet. Autonomie is een van de krachtigste energiebronnen.',
+          },
+          {
+            title: 'Sociale steun',
+            desc: 'Steun van collega\'s en leidinggevende. Erkenning, waardering en het gevoel er niet alleen voor te staan geven kracht.',
+          },
+          {
+            title: 'Groeimogelijkheden',
+            desc: 'De kans om te leren, te ontwikkelen en door te groeien. Mensen die kunnen groeien zijn bevlogener en vitaler.',
+          },
+          {
+            title: 'Feedback',
+            desc: 'Regelmatige, constructieve feedback helpt u te weten hoe u het doet en waar u kunt verbeteren. Dit motiveert en geeft richting.',
+          },
+          {
+            title: 'Zinvol werk',
+            desc: 'Het gevoel dat uw werk er toe doet, dat u bijdraagt aan iets groters. Betekenisvol werk is een diepe bron van motivatie en voldoening.',
+          },
+          {
+            title: 'Taakvariatie',
+            desc: 'Afwisseling in werkzaamheden houdt het werk interessant en uitdagend. Eentonig werk put uit; variatie geeft energie.',
+          },
+        ].map((card) => (
+          <div class="bg-white rounded-xl p-6 shadow-md border-t-4 border-accent">
+            <h3 class="font-heading font-semibold text-lg text-primary mb-3">{card.title}</h3>
+            <p class="text-muted text-sm leading-relaxed">{card.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Hoe kunt u de balans herstellen? -->
+  <section class="bg-section-alt py-20">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="font-heading font-bold text-3xl text-primary mb-5 text-center">Hoe herstelt u de balans?</h2>
+      <p class="text-muted leading-relaxed mb-8 text-center">
+        De werkenergieanalyse geeft u inzicht in uw persoonlijke balans. Vervolgens werken we samen aan concrete stappen.
+      </p>
+      <div class="space-y-5">
+        {[
+          { title: 'Werkstressoren verminderen', desc: 'Soms is het mogelijk werkstressoren te reduceren: betere planning, grenzen stellen, taken herprioriteren of situaties aanpakken die onnodige stress veroorzaken.' },
+          { title: 'Energiebronnen versterken', desc: 'Actief bouwen aan energiebronnen: meer autonomie claimen, om feedback vragen, verbindingen met collega\'s versterken, of leermogelijkheden benutten.' },
+          { title: 'Job crafting', desc: 'Job crafting is het bewust aanpassen van uw werk om het beter te laten aansluiten bij uw talenten en motivaties. U neemt de regie over uw eigen werkgeluk.' },
+          { title: 'Persoonlijke hulpbronnen ontwikkelen', desc: 'Werken aan uw veerkracht, zelfvertrouwen en proactiviteit. Dit zijn persoonlijke kwaliteiten die u helpen beter met stressoren om te gaan.' },
+        ].map((item) => (
+          <div class="bg-white rounded-xl p-6 shadow-sm">
+            <h3 class="font-heading font-semibold text-lg text-primary mb-2">{item.title}</h3>
+            <p class="text-muted text-sm leading-relaxed">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <CTASection
+    title="Wilt u uw energiebalans in kaart brengen?"
+    subtitle="Plan een vrijblijvend kennismakingsgesprek en ontdek hoe de Werkenergieanalyse u kan helpen."
+    href="/contact"
+    btnText="Plan een gratis kennismaking"
+  />
+
+</BaseLayout>

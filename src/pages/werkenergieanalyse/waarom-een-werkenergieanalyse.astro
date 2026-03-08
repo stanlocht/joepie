@@ -1,0 +1,162 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import SectionTitle from '../../components/SectionTitle.astro';
+import CTASection from '../../components/CTASection.astro';
+---
+
+<BaseLayout
+  title="Waarom een Werkenergieanalyse?"
+  description="Waarom een werkenergieanalyse? Joep Lochtenberg legt uit hoe de werkenergieanalyse helpt bij het vergroten van werkplezier en het voorkomen van burn-out."
+>
+
+  <!-- Hero -->
+  <section class="bg-primary text-white py-20">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <span class="text-accent font-semibold uppercase text-sm tracking-wider mb-4 block">Werkenergieanalyse</span>
+      <h1 class="font-heading font-bold text-4xl md:text-5xl mb-6">Waarom een Werkenergieanalyse?</h1>
+      <p class="text-white/85 text-xl leading-relaxed max-w-2xl mx-auto">
+        Werkplezier en vitaliteit zijn geen luxe – ze zijn essentieel voor uw gezondheid, prestaties en loopbaansucces.
+      </p>
+    </div>
+  </section>
+
+  <!-- De kern -->
+  <section class="bg-background py-20">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="font-heading font-bold text-3xl text-primary mb-5">De kern van de zaak</h2>
+      <p class="text-muted leading-relaxed mb-4">
+        Veel mensen ervaren dat hun werk hen meer energie kost dan het oplevert. Ze voelen zich moe, minder gemotiveerd en merken dat hun prestaties afnemen. Dit is een signaal dat de balans tussen werkstressoren en energiebronnen verstoord is geraakt.
+      </p>
+      <p class="text-muted leading-relaxed mb-4">
+        Links laten liggen van dit signaal leidt tot risico's: verhoogd ziekteverzuim, verminderde productiviteit en in het ergste geval een burn-out of andere stressgerelateerde klachten.
+      </p>
+      <p class="text-muted leading-relaxed mb-8">
+        De Werkenergieanalyse is een vroeg-signaleringsysteem. Het helpt u – of uw medewerkers – te begrijpen wat er speelt, voordat problemen escaleren.
+      </p>
+
+      <div class="bg-section-alt rounded-2xl p-8">
+        <h3 class="font-heading font-semibold text-xl text-primary mb-4">Alarmbellen: herkent u dit?</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {[
+            'U gaat met tegenzin naar uw werk',
+            'U voelt zich uitgeput na een werkdag',
+            'U mist de motivatie die u eerder had',
+            'U heeft moeite om u te concentreren',
+            'U merkt dat kleine zaken u snel irriteren',
+            'U slaapt slecht door werkgerelateerde zorgen',
+            'U ervaart fysieke klachten zonder duidelijke oorzaak',
+            'U vraagt zich af of dit het is in uw loopbaan',
+          ].map((item) => (
+            <div class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-gold flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd" />
+              </svg>
+              <span class="text-muted text-sm">{item}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Wetenschappelijke basis -->
+  <section class="bg-section-alt py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <SectionTitle
+        title="Wetenschappelijk onderbouwd"
+        subtitle="De werkenergieanalyse is gebaseerd op het internationaal erkende JD-R model."
+      />
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <h3 class="font-heading font-semibold text-xl text-primary mb-4">Het Job Demands-Resources model</h3>
+          <p class="text-muted leading-relaxed mb-4">
+            Het JD-R model (Job Demands-Resources) is ontwikkeld door wetenschappers Arnold Bakker en Evangelia Demerouti. Het is een van de meest geciteerde modellen in de arbeids- en organisatiepsychologie.
+          </p>
+          <p class="text-muted leading-relaxed mb-4">
+            Het model stelt dat alle werkkenmerken in twee categorieën vallen: taakeisen (job demands) en energiebronnen (job resources). Een gezonde balans tussen deze twee leidt tot bevlogenheid en goede prestaties. Een onbalans leidt tot stress en uitputting.
+          </p>
+          <p class="text-muted leading-relaxed">
+            De werkenergieanalyse maakt dit model praktisch toepasbaar. U meet uw eigen situatie, u begrijpt wat er speelt en u krijgt concrete handvatten om de balans te herstellen.
+          </p>
+        </div>
+        <div class="grid grid-cols-2 gap-4">
+          {[
+            { label: 'Taakeisen', items: ['Werkdruk', 'Emotionele belasting', 'Cognitieve belasting', 'Rolconflict'], color: 'bg-gold/10 border-gold' },
+            { label: 'Energiebronnen', items: ['Autonomie', 'Sociale steun', 'Groeimogelijkheden', 'Feedback'], color: 'bg-section-alt border-accent' },
+          ].map((box) => (
+            <div class={`rounded-xl p-5 border-2 ${box.color}`}>
+              <h4 class="font-heading font-semibold text-primary mb-3 text-sm">{box.label}</h4>
+              <ul class="space-y-1">
+                {box.items.map((item) => (
+                  <li class="text-muted text-xs">{item}</li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Voordelen voor individu en organisatie -->
+  <section class="bg-background py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <SectionTitle
+        title="De voordelen"
+        subtitle="De werkenergieanalyse levert voordelen op voor zowel individuen als organisaties."
+      />
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+        <div>
+          <h3 class="font-heading font-semibold text-xl text-primary mb-5">Voor individuen</h3>
+          <ul class="space-y-4">
+            {[
+              { title: 'Meer zelfkennis', desc: 'U begrijpt beter wat u drijft, belast en motiveert in uw werk.' },
+              { title: 'Preventie van burn-out', desc: 'U herkent vroeg de signalen en kunt tijdig bijsturen.' },
+              { title: 'Meer werkplezier', desc: 'Door te werken aan uw energiebronnen vergroot u uw dagelijkse voldoening.' },
+              { title: 'Betere loopbaankeuzes', desc: 'Inzicht in uw energiepatroon helpt u bewuster te kiezen in uw loopbaan.' },
+            ].map((item) => (
+              <li class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-accent flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <div>
+                  <span class="font-semibold text-primary">{item.title}:</span>
+                  <span class="text-muted ml-1">{item.desc}</span>
+                </div>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-heading font-semibold text-xl text-primary mb-5">Voor organisaties</h3>
+          <ul class="space-y-4">
+            {[
+              { title: 'Lager verzuim', desc: 'Vroeg signaleren van stressrisico\'s vermindert langdurig verzuim aanzienlijk.' },
+              { title: 'Hogere productiviteit', desc: 'Vitale en bevlogen medewerkers presteren beter en zijn creatiever.' },
+              { title: 'Beter behoud van talent', desc: 'Medewerkers die zich gezien voelen, zijn loyaler en minder snel geneigd te vertrekken.' },
+              { title: 'Inzicht op teamniveau', desc: 'Bij groepstrajecten krijgt u inzicht in de collectieve energiepatronen binnen uw team.' },
+            ].map((item) => (
+              <li class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-accent flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <div>
+                  <span class="font-semibold text-primary">{item.title}:</span>
+                  <span class="text-muted ml-1">{item.desc}</span>
+                </div>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <CTASection
+    title="Wilt u uw werkenergie in kaart brengen?"
+    subtitle="Neem contact op voor een vrijblijvend kennismakingsgesprek en ontdek hoe de werkenergieanalyse u kan helpen."
+    href="/contact"
+    btnText="Plan een gratis kennismaking"
+  />
+
+</BaseLayout>

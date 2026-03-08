@@ -1,0 +1,22 @@
+---
+interface Props {
+  icon: string;
+  title: string;
+  desc: string;
+  href: string;
+}
+
+const { icon, title, desc, href } = Astro.props;
+---
+
+<div class="bg-white border-t-4 border-accent rounded-xl p-6 shadow-md hover:-translate-y-1 hover:shadow-xl transition-all duration-300 flex flex-col">
+  <div class="text-accent mb-4 w-12 h-12 flex items-center justify-center bg-section-alt rounded-lg">
+    <Fragment set:html={icon} />
+  </div>
+  <h3 class="font-heading font-semibold text-xl text-primary mb-3">{title}</h3>
+  <p class="text-muted leading-relaxed flex-1 mb-4">{desc}</p>
+  <a href={href} class="text-accent font-semibold hover:text-primary transition-colors inline-flex items-center gap-1">
+    Lees meer
+    <span aria-hidden="true">→</span>
+  </a>
+</div>
