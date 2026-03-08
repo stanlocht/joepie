@@ -124,23 +124,27 @@
 </nav>
 
 <script>
-  const btn = document.getElementById('mobile-menu-btn');
-  const menu = document.getElementById('mobile-menu');
-  const hamburger = document.getElementById('hamburger-icon');
-  const closeIcon = document.getElementById('close-icon');
+  function initNav() {
+    const btn = document.getElementById('mobile-menu-btn');
+    const menu = document.getElementById('mobile-menu');
+    const hamburger = document.getElementById('hamburger-icon');
+    const closeIcon = document.getElementById('close-icon');
 
-  btn?.addEventListener('click', () => {
-    const isOpen = !menu?.classList.contains('hidden');
-    menu?.classList.toggle('hidden', isOpen);
-    hamburger?.classList.toggle('hidden', !isOpen);
-    closeIcon?.classList.toggle('hidden', isOpen);
-  });
-
-  document.querySelectorAll('.mobile-submenu-btn').forEach((button) => {
-    button.addEventListener('click', () => {
-      const target = (button as HTMLElement).dataset.target;
-      const submenu = document.getElementById(target!);
-      submenu?.classList.toggle('hidden');
+    btn?.addEventListener('click', () => {
+      const isOpen = !menu?.classList.contains('hidden');
+      menu?.classList.toggle('hidden', isOpen);
+      hamburger?.classList.toggle('hidden', !isOpen);
+      closeIcon?.classList.toggle('hidden', isOpen);
     });
-  });
+
+    document.querySelectorAll('.mobile-submenu-btn').forEach((button) => {
+      button.addEventListener('click', () => {
+        const target = (button as HTMLElement).dataset.target;
+        const submenu = document.getElementById(target!);
+        submenu?.classList.toggle('hidden');
+      });
+    });
+  }
+
+  document.addEventListener('astro:page-load', initNav);
 </script>
